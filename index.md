@@ -12,10 +12,12 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 
     <!-- 本科教育 -->
     <div class="education-item">
-        <div class="two-col-entry">
-            <div class="time-range">Sept 2020 – June 2024</div>
-            <div class="details">
-                <strong>Shandong University</strong>, Undergraduate, Automation
+        <div class="bordered-container"> <!-- 新增边框容器 -->
+            <div class="two-col-entry">
+                <div class="time-range">Sept 2020 – June 2024</div>
+                <div class="details">
+                    <strong>Shandong University</strong>, Undergraduate, Automation
+                </div>
             </div>
         </div>
         
@@ -29,10 +31,12 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 
     <!-- 研究生教育 -->
     <div class="education-item">
-        <div class="two-col-entry">
-            <div class="time-range">Sept 2024 – now</div>
-            <div class="details">
-                <strong>Hong Kong University of Science and Technology (GZ)</strong>, MPhil, AI Thrust
+        <div class="bordered-container"> <!-- 新增边框容器 -->
+            <div class="two-col-entry">
+                <div class="time-range">Sept 2024 – now</div>
+                <div class="details">
+                    <strong>Hong Kong University of Science and Technology (GZ)</strong>, MPhil, AI Thrust
+                </div>
             </div>
         </div>
         
@@ -46,22 +50,31 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 </div>
 
 <style>
+.bordered-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
+
 .education-section {
     margin-bottom: 30px;
 }
 
 .two-col-entry {
     display: flex;
-    margin-bottom: 8px;
 }
 
 .time-range {
     width: 20%;
     font-weight: 500;
+    color: #666;
 }
 
 .details {
     width: 80%;
+    color: #333;
 }
 
 .one-col-entry {
