@@ -23,7 +23,6 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
         
         <div class="one-col-entry">
             <ul class="highlights">
-                <li>GPA: 3.3/4.0</li>
                 <li><strong>Coursework:</strong> Natural Language Processing, Image Processing, Machine Learning</li>
             </ul>
         </div>
@@ -43,7 +42,6 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
         <div class="one-col-entry">
             <ul class="highlights">
                 <li><strong>Areas of Interest:</strong> Multimodal Large Models, Natural Language Processing, Reinforcement Learning</li>
-                <li><strong>Coursework:</strong> Natural Language Processing, Image Processing, Machine Learning</li>
             </ul>
         </div>
     </div>
