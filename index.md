@@ -7,7 +7,76 @@ layout: page
 <!-- <img src="https://caihanlin.com/caihanlin.jpg" class="floatpic"> -->
 
 Here is **Jianxiang He (Jackson, 何建翔)**.<br>
+<div class="education-section">
+    <h2>Education</h2>
 
+    <!-- 本科教育 -->
+    <div class="education-item">
+        <div class="two-col-entry">
+            <div class="time-range">Sept 2020 – June 2024</div>
+            <div class="details">
+                <strong>Shandong University</strong>, Undergraduate, Automation
+            </div>
+        </div>
+        
+        <div class="one-col-entry">
+            <ul class="highlights">
+                <li>GPA: 3.3/4.0</li>
+                <li><strong>Coursework:</strong> Natural Language Processing, Image Processing, Machine Learning</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 研究生教育 -->
+    <div class="education-item">
+        <div class="two-col-entry">
+            <div class="time-range">Sept 2024 – now</div>
+            <div class="details">
+                <strong>Hong Kong University of Science and Technology (GZ)</strong>, MPhil, AI Thrust
+            </div>
+        </div>
+        
+        <div class="one-col-entry">
+            <ul class="highlights">
+                <li><strong>Areas of Interest:</strong> Multimodal Large Models, Natural Language Processing, Reinforcement Learning</li>
+                <li><strong>Coursework:</strong> Natural Language Processing, Image Processing, Machine Learning</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+.education-section {
+    margin-bottom: 30px;
+}
+
+.two-col-entry {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.time-range {
+    width: 20%;
+    font-weight: 500;
+}
+
+.details {
+    width: 80%;
+}
+
+.one-col-entry {
+    margin-bottom: 20px;
+}
+
+.highlights {
+    margin: 8px 0;
+    padding-left: 25px;
+}
+
+.highlights li {
+    margin-bottom: 6px;
+}
+</style>
 
 **<font color="#990000">I am actively seeking a PhD position for 2025 Fall admission. If you have any information, please contact me. Thank you!</font>**
 
