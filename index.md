@@ -89,7 +89,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 }
 </style>
 
-**<font color="#990000">I am actively seeking a PhD position for 2025 Fall admission. If you have any information, please contact me. Thank you!</font>**
+**<font color="#990000">I am actively seeking a PhD position for 2026 Fall admission. If you have any information, please contact me. Thank you!</font>**
 
 ---
 
