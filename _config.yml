@@ -7,7 +7,7 @@ url: https://jacksonha7.github.io/
 # Owner/author information
 owner:
   name: Jianxiang He
-  avatar: hanlin.jpg
+  avatar: jianxiang.jpg
   # bio: Two roads diverged in woods, I took the one less traveled by.
   email: jhe307@connect.hkust-gz.edu.cn
   cv: https://caihanlin.com/file/CV-HanlinCAI.pdf
@@ -50,7 +50,7 @@ links:
   #   url: /blogs/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: China/Beijing
+timezone: China/Guangzhou
 future: true
 highlighter: rouge
 # markdown: kramdown
