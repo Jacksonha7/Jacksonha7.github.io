@@ -4,20 +4,17 @@ permalink: /publications/index.html
 title: Publications
 ---
 
-> (†: equal contribution, ~: corresponding author)
-
 ## Working Paper
 
-- Semantic Communication for the Internet of Space: Architecture, Challenges, and Future Vision<br>Hanlin Cai, Houtianfu Wang, Haofan Dong, Ozgur B. Akan~<br>Submitted to **NeurIPS2025**.
+- Waiting for a name <br>**Jianxiang He**, Meisheng Hong<br>Submitted to **NeurIPS2025**.
 
 ---
 
 ## Conference Paper
 
-- [A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges](https://arxiv.org/abs/2412.11936)<br>Yibo Yan, Jiamin Su, **Jianxiang He**, Fangteng Fu, Xu Zheng, Yuanhuiyi Lyu, Kun Wang, Shen Wang, Qingsong Wen, Xuming Hu<br>Proceedings of the 9th Workshop on Molecular Communications<br>
-  [arXiv](https://arxiv.org/abs/2502.08426). Catania, Italy. February, 2025.
+- [A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges](https://arxiv.org/abs/2412.11936)<br>Yibo Yan, Jiamin Su, **Jianxiang He**, Fangteng Fu, Xu Zheng, Yuanhuiyi Lyu, Kun Wang, Shen Wang, Qingsong Wen, Xuming Hu<br>The 63rd Annual Meeting of the Association for Computational Linguistics (ACL)<br>
 
-- [A Survey of fMRI to Image Reconstruction](https://arxiv.org/abs/2502.16861)<br>Weiyu Guo, Guoying Sun, **JianXiang He**, Tong Shao, Shaoguang Wang, Ziyang Chen, Meisheng Hong, Ying Sun, Hui Xiong**~**<br>The 30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2024), [Undergraduate Consortium](https://kdd2024.kdd.org/undergraduate-consortium/).<br>Barcelona, Spain. August, 2024.<br>
+- [A Survey of fMRI to Image Reconstruction](https://arxiv.org/abs/2502.16861)<br>Weiyu Guo, Guoying Sun, **JianXiang He**, Tong Shao, Shaoguang Wang, Ziyang Chen, Meisheng Hong, Ying Sun, Hui Xiong**~**<br>The 34th International Joint Conference on Artificial Intelligence (IJCAI)<br>
 
 - [The development of spiking neural network: A review](https://ieeexplore.ieee.org/abstract/document/10012028/)<br>**Jianxiang He**, Yanzi Li, Yingtian Liu, Jiyang Chen, Chaoqun Wang, Rui Song, Yibin Li**~**<br>2022 IEEE International Conference on Robotics and Biomimetics (ROBIO)<br>
 
@@ -28,7 +25,7 @@ title: Publications
 
 ---
 
-## Early Project
+<!-- ## Early Project
 
 - [Securing Billion Bluetooth Devices leveraging Learning-based Techniques](https://ojs.aaai.org/index.php/AAAI/article/view/30544)<br>*Final year project ([thesis](https://caihanlin.com/mypaper/thesis/UG-thesis.pdf)).*<br>**Hanlin Cai** (Advisors: Zhezhuang Xu, Tozammel Hossain)<br>The 38th Annual AAAI Conference on Artificial Intelligence (AAAI 2024), [Undergraduate Consortium](https://aaai.org/aaai-24-conference/undergraduate-consortium-program/).<br>Vancouver, Canada. February, 2024.
 
@@ -36,7 +33,7 @@ title: Publications
 
 - An IoT Garbage Monitoring System for Effective Garbage Management<br>*First-year course design.*<br>**Hanlin Cai**, Jiaqi Hu, Zheng Li, Wei Hong Lim, Mastaneh Mokayef, Chin Hong Wong<br>The 4th International Conference on Computer Engineering, Network and Intelligent Multimedia<br>Surabaya, Indonesia. November, 2022 (EI Compendex).<br>
 
-  <br>
+  <br> -->
 
 ---
 
