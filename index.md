@@ -145,7 +145,48 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
     </li>
   </ul>
 </div>
+---
 
+## Early experiences
+<div class="cv-experience">
+  <h2>Computer Vision Research</h2>
+  
+  <div class="project">
+    <div class="project-header">
+      <h3>Oxford Visual Intelligence Lab</h3>
+      <span class="time">Sep 2021 - Dec 2021</span>
+    </div>
+    <ul class="tech-list">
+      <li>Developed multi-camera 3D human pose estimation pipeline using PyTorch with <strong>87% PCK accuracy</strong></li>
+      <li>Designed temporal alignment framework for RGB-D video streams using <em>OpenCV</em> and <em>FFmpeg</em></li>
+      <li>Implemented attention-guided visual saliency prediction combining CNN and LSTM architectures</li>
+      <li>Created synthetic training data pipeline with <strong>Blender</strong> for occlusion-robust object detection</li>
+    </ul>
+    <div class="achievement">
+      <span class="badge">Innovation</span>
+      <span class="badge">Real-time System</span>
+      <span class="badge">Multi-modal Fusion</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <h3>Oxford Autonomous Systems Initiative</h3>
+      <span class="time">Dec 2021 - Dec 2022</span>
+    </div>
+    <ul class="tech-list">
+      <li>Built vision transformer (ViT) model for traffic flow prediction from surveillance camera feeds (<em>79.2% mAP</em>)</li>
+      <li>Pioneered neural radiance fields (NeRF) implementation for urban scene reconstruction from drone footage</li>
+      <li>Optimized YOLOv7 deployment on edge devices using TensorRT with <strong>23ms inference latency</strong></li>
+      <li>Developed GAN-based framework for synthetic adverse weather condition generation (<em>FID score 18.7</em>)</li>
+    </ul>
+    <div class="achievement">
+      <span class="badge">3D Reconstruction</span>
+      <span class="badge">Edge AI</span>
+      <span class="badge">Synthetic Data</span>
+    </div>
+  </div>
+</div>
 
 <br>
 
