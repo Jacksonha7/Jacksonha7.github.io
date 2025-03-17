@@ -104,7 +104,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 
 ## News and Updates
 <div class="publications">
-  <h2>Publications</h2>
+  <!-- <h2>Publications</h2> -->
   <ul class="timeline">
     <!-- 已发表论文 -->
     <li>
@@ -112,7 +112,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
       <div class="pub-item">
         <a href="#"><em>The development of spiking neural network: A review</em></a>
         <div class="authors"><u>Jianxiang He</u>, Yanzi Li, Yingtian Liu, et al.</div>
-        <p>系统综述了脉冲神经网络（SNN）的四大核心模块（神经元模型、编码方法、网络架构与学习算法），对比了Hodgkin-Huxley、LIF等模型的生物解释性与计算效率...</p>
+        <!-- <p>系统综述了脉冲神经网络（SNN）的四大核心模块（神经元模型、编码方法、网络架构与学习算法），对比了Hodgkin-Huxley、LIF等模型的生物解释性与计算效率...</p> -->
       </div>
     </li>
 
@@ -122,7 +122,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
       <div class="pub-item">
         <a href="#"><em>A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model</em></a>
         <div class="authors">Yibo Yan, Jiaming Su, <u>Jianxiang He</u>, et al.</div>
-        <p>系统整合了200+项研究，提出涵盖问题求解、定理证明与错误诊断的多任务评估体系...</p>
+        <!-- <p>系统整合了200+项研究，提出涵盖问题求解、定理证明与错误诊断的多任务评估体系...</p> -->
       </div>
     </li>
 
@@ -131,7 +131,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
       <div class="pub-item">
         <a href="#"><em>A Survey of fMRI to Image Reconstruction</em></a>
         <div class="authors">Weiyu Guo, Guoying Sun, <u>Jianxiang He</u>, et al.</div>
-        <p>首次提出并系统梳理了fMRI到图像重建（fMRI2Image）领域的完整方法论框架...</p>
+        <!-- <p>首次提出并系统梳理了fMRI到图像重建（fMRI2Image）领域的完整方法论框架...</p> -->
       </div>
     </li>
 
@@ -140,7 +140,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
       <div class="pub-item">
         <a href="#"><em>Logic-in-Frames: Dynamic keyframe search through visual semantic-logic verification for long video understanding</em></a>
         <div class="authors">Weiyu Guo, Ziyang Chen, Shaoguang Wang, <u>Jianxiang He</u>, et al.</div>
-        <p>提出VSLS视觉语义逻辑搜索框架，首次在长视频理解中引入四类语义逻辑关系...</p>
+        <!-- <p>提出VSLS视觉语义逻辑搜索框架，首次在长视频理解中引入四类语义逻辑关系...</p> -->
       </div>
     </li>
   </ul>
