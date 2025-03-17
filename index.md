@@ -148,42 +148,48 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 ---
 
 ## Early experiences
-<div class="cv-experience">
-  <h2>Computer Vision Research</h2>
-  
+<div class="research-experience">
+  <h2>Research Experience</h2>
+
+  <!-- 牛津导师制项目 -->
   <div class="project">
     <div class="project-header">
-      <h3>Oxford Visual Intelligence Lab</h3>
+      <h3>Oxford Online Tutorial Project 
+        <span class="subtitle">(Mentored Research)</span></h3>
       <span class="time">Sep 2021 - Dec 2021</span>
     </div>
+    <div class="advisor">
+      <i class="fas fa-chalkboard-teacher"></i>
+      Supervisor: Prof. Michael Brown, Computer Vision Group
+    </div>
     <ul class="tech-list">
-      <li>Developed multi-camera 3D human pose estimation pipeline using PyTorch with <strong>87% PCK accuracy</strong></li>
-      <li>Designed temporal alignment framework for RGB-D video streams using <em>OpenCV</em> and <em>FFmpeg</em></li>
-      <li>Implemented attention-guided visual saliency prediction combining CNN and LSTM architectures</li>
-      <li>Created synthetic training data pipeline with <strong>Blender</strong> for occlusion-robust object detection</li>
+      <li>Developed real-time gaze tracking system using <strong>OpenCV</strong> and MediaPipe, achieving 85% accuracy on MIT Eye Dataset</li>
+      <li>Built multi-modal data synchronization pipeline for aligning eye tracking videos with EEG signals</li>
+      <li>Implemented image preprocessing workflow including ROI detection and perspective correction</li>
+      <li>Visualized attention heatmaps through Gaussian kernel density estimation</li>
     </ul>
     <div class="achievement">
-      <span class="badge">Innovation</span>
-      <span class="badge">Real-time System</span>
-      <span class="badge">Multi-modal Fusion</span>
+      <span class="badge">Real-time Processing</span>
+      <span class="badge">Human-Computer Interaction</span>
     </div>
   </div>
 
+  <!-- STEM跨学科项目 -->
   <div class="project">
     <div class="project-header">
-      <h3>Oxford Autonomous Systems Initiative</h3>
+      <h3>Oxford STEM Summer School 
+        <span class="subtitle">(Interdisciplinary Program)</span></h3>
       <span class="time">Dec 2021 - Dec 2022</span>
     </div>
     <ul class="tech-list">
-      <li>Built vision transformer (ViT) model for traffic flow prediction from surveillance camera feeds (<em>79.2% mAP</em>)</li>
-      <li>Pioneered neural radiance fields (NeRF) implementation for urban scene reconstruction from drone footage</li>
-      <li>Optimized YOLOv7 deployment on edge devices using TensorRT with <strong>23ms inference latency</strong></li>
-      <li>Developed GAN-based framework for synthetic adverse weather condition generation (<em>FID score 18.7</em>)</li>
+      <li>Collaborated with materials science researchers on microstructure image analysis using <strong>Scikit-image</strong></li>
+      <li>Designed CNN-based classifier for defect detection in SEM images (F1-score 78.5%)</li>
+      <li>Participated in cross-domain workshops with Oxford Robotics Institute on sensor fusion techniques</li>
+      <li>Presented technical report on applications of homography transformation in drone navigation</li>
     </ul>
     <div class="achievement">
-      <span class="badge">3D Reconstruction</span>
-      <span class="badge">Edge AI</span>
-      <span class="badge">Synthetic Data</span>
+      <span class="badge">Cross-domain Collaboration</span>
+      <span class="badge">Image Analysis</span>
     </div>
   </div>
 </div>
