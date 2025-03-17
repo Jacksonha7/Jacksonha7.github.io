@@ -53,12 +53,8 @@ links:
 timezone: China/Guangzhou
 future: true
 highlighter: rouge
-# markdown: kramdown
-# markdown: redcarpet
-# pygments: true
 
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 
 
@@ -69,19 +65,8 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
-  # coderay:
-  #   coderay_line_numbers:
-  #   coderay_line_numbers_start: 1
-  #   coderay_tab_width: 4
-  #   coderay_bold_every: 10
-  #   coderay_css: class
-
-
-# disqus settings:
 disqus:
   shortname: lancecai
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
-
-# Latest update in 2023/12/10 by Hanlin Cai.

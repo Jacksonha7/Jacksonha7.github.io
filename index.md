@@ -147,9 +147,8 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 </div>
 ---
 
-## Early experiences
 <div class="research-experience">
-  <h2>Research Experience</h2>
+  <h2>Early Research Experience</h2>
 
   <!-- 牛津导师制项目 -->
   <div class="project">
@@ -160,7 +159,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
     </div>
     <div class="advisor">
       <i class="fas fa-chalkboard-teacher"></i>
-      Supervisor: Prof. Michael Brown, Computer Vision Group
+      Supervisor: Prof. David Clifton, Computer Vision Group
     </div>
     <ul class="tech-list">
       <li>Developed real-time gaze tracking system using <strong>OpenCV</strong> and MediaPipe, achieving 85% accuracy on MIT Eye Dataset</li>
