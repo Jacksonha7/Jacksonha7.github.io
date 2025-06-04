@@ -5,335 +5,374 @@ title: Awards
 ---
 
 <style>
-/* 全局样式 */
-.page-content {
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #2c3e50;
-  padding: 0 20px;
-}
+        /* ===== 全局样式 ===== */
+        .page-container {
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #2c3e50;
+            padding: 0 20px 60px;
+        }
 
-/* 标题样式 */
-.page-title {
-  text-align: center;
-  font-weight: 600;
-  margin: 40px 0 30px;
-  position: relative;
-  color: #2c3e50;
-}
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin: 45px 0 25px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #2c3e50;
+        }
 
-.page-title:after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: #3498db;
-  margin: 15px auto 0;
-}
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            border-radius: 3px;
+        }
 
-/* 分区样式 */
-.section-container {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 30px;
-  margin-bottom: 40px;
-}
+        /* ===== 卡片样式 ===== */
+        .content-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+            padding: 35px 40px;
+            margin-bottom: 40px;
+        }
 
-.section-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
-}
+        /* ===== 奖项部分 ===== */
+        .category-container {
+            margin-bottom: 30px;
+        }
 
-.section-header h2 {
-  margin: 0;
-  font-weight: 600;
-  color: #3498db;
-  font-size: 1.6rem;
-}
+        .category-header {
+            position: relative;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+        }
 
-.section-header i {
-  margin-right: 12px;
-  color: #e67e22;
-}
+        .category-header h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
 
-/* 奖项样式 */
-.category-container {
-  margin-bottom: 30px;
-}
+        .category-header:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            border-radius: 2px;
+        }
 
-.category-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
+        .award-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.category-header h3 {
-  margin: 0;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #2c3e50;
-  background: linear-gradient(to right, transparent 0%, #f8f9fa 50%, transparent 100%);
-  padding: 5px 0 5px 15px;
-  width: 100%;
-}
+        .award-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f4f8;
+            display: flex;
+            gap: 15px;
+        }
 
-.award-list {
-  list-style: none;
-  padding-left: 0;
-}
+        .award-item:last-child {
+            border-bottom: none;
+        }
 
-.award-item {
-  margin-bottom: 20px;
-  padding-left: 40px;
-  position: relative;
-}
+        .award-time {
+            background: #f8f9fa;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #7f8c8d;
+            min-width: 100px;
+            text-align: center;
+            height: fit-content;
+        }
 
-.award-item:before {
-  content: '★';
-  position: absolute;
-  left: 0;
-  top: 2px;
-  color: #e67e22;
-  font-size: 18px;
-}
+        .award-content {
+            flex: 1;
+        }
 
-.award-time {
-  display: inline-block;
-  background: #e8f4fc;
-  padding: 3px 10px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #3498db;
-  margin-right: 10px;
-}
+        .award-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2c3e50;
+            margin: 0 0 8px;
+        }
 
-.award-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
+        .award-description {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
 
-.award-description {
-  display: block;
-  color: #7f8c8d;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-top: 5px;
-}
+        /* ===== 科研经历部分 ===== */
+        .project-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #ecf0f1;
+        }
 
-/* 科研项目样式 */
-.project-item {
-  border-left: 3px solid #3498db;
-  padding-left: 25px;
-  margin-bottom: 35px;
-  position: relative;
-}
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+        }
 
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
-}
+        .project-header {
+            display: flex;
+            align-items: flex-start;
+            padding: 22px 25px;
+            border-bottom: 1px solid #f0f4f8;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-.project-title {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #2c3e50;
-  margin: 0;
-}
+        .project-time {
+            background: #f8f9fa;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #7f8c8d;
+            min-width: 170px;
+            text-align: center;
+        }
 
-.project-subtitle {
-  font-size: 0.95rem;
-  color: #7f8c8d;
-  font-weight: 400;
-  font-style: italic;
-}
+        .project-title-container {
+            flex: 1;
+            min-width: 250px;
+        }
 
-.project-time {
-  background: #f8f9fa;
-  padding: 3px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #7f8c8d;
-  min-width: 170px;
-  text-align: center;
-  align-self: flex-start;
-}
+        .project-title {
+            margin: 0 0 5px;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
 
-.project-advisor {
-  display: flex;
-  align-items: center;
-  color: #3498db;
-  font-size: 0.95rem;
-  margin: 10px 0 15px;
-}
+        .project-subtitle {
+            display: block;
+            font-size: 1.05rem;
+            color: #3498db;
+            font-weight: 500;
+        }
 
-.project-advisor i {
-  margin-right: 8px;
-}
+        .project-tag {
+            background: #e8f4fc;
+            color: #3498db;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
 
-.project-list {
-  list-style: none;
-  padding-left: 20px;
-}
+        .project-details {
+            padding: 22px 25px;
+            background: #f9fbfd;
+        }
 
-.project-list li {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 25px;
-  line-height: 1.6;
-}
+        .project-advisor {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #7f8c8d;
+        }
 
-.project-list li:before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: #3498db;
-}
+        .project-advisor i {
+            margin-right: 10px;
+            color: #3498db;
+        }
 
-.project-list strong {
-  color: #e74c3c;
-}
+        .project-list {
+            padding: 0;
+            margin: 0 0 20px;
+            list-style: none;
+        }
 
-.project-badge {
-  display: inline-block;
-  background: #e8f4fc;
-  color: #3498db;
-  padding: 5px 12px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  margin-right: 8px;
-  margin-top: 15px;
-}
+        .project-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #34495e;
+        }
 
-@media (max-width: 768px) {
-  .project-header {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .project-time {
-    align-self: flex-start;
-  }
-}
-</style>
+        .project-list li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
 
-<div class="page-content">
-  <h1 class="page-title">AWARDS & RESEARCH</h1>
+        .project-badge {
+            display: inline-block;
+            background: #e8f4fc;
+            color: #3498db;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
 
-  <!-- 奖项部分 -->
-  <div class="section-container">
-    <div class="section-header">
-      <i class="fas fa-trophy"></i>
-      <h2>AWARDS</h2>
-    </div>
+        /* ===== 响应式设计 ===== */
+        @media (max-width: 768px) {
+            .award-item {
+                flex-direction: column;
+            }
+            
+            .award-time {
+                align-self: flex-start;
+            }
+            
+            .project-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .project-time {
+                align-self: flex-start;
+            }
+        }
 
-    <div class="category-container">
-      <div class="category-header">
-        <h3>COMPETITIONS</h3>
-      </div>
-      <ul class="award-list">
-        <li class="award-item">
-          <span class="award-time">2021</span>
-          <div class="award-title">Provincial First Prize of the National College Students' Mathematical Modeling Competition (National Competition)</div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="category-container">
-      <div class="category-header">
-        <h3>SCHOLARSHIPS</h3>
-      </div>
-      <ul class="award-list">
-        <li class="award-item">
-          <span class="award-time">2022-2023</span>
-          <div class="award-title">New Scenery Special Scholarship of Shandong University</div>
-          <span class="award-description">One of the university's highest honors and scholarships</span>
-        </li>
-      </ul>
-    </div>
-
-    <div class="category-container">
-      <div class="category-header">
-        <h3>HONORS</h3>
-      </div>
-      <ul class="award-list">
-        <li class="award-item">
-          <span class="award-time">2021-2022</span>
-          <div class="award-title">Excellent Individual of Innovation and Entrepreneurship of Shandong University</div>
-          <span class="award-description">Annual award rate &lt; 5%</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 科研经历部分 -->
-  <div class="section-container">
-    <div class="section-header">
-      <i class="fas fa-flask"></i>
-      <h2>EARLY RESEARCH EXPERIENCE</h2>
-    </div>
-
-    <!-- 牛津导师制项目 -->
-    <div class="project-item">
-      <div class="project-header">
-        <div>
-          <h3 class="project-title">Oxford Online Tutorial Project</h3>
-          <span class="project-subtitle">Mentored Research</span>
+        @media (max-width: 480px) {
+            .content-card, .project-item {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <!-- 主标题 -->
+        <h2 class="section-title">AWARDS & RESEARCH</h2>
+        
+        <!-- 奖项部分 -->
+        <div class="content-card">
+            <div class="category-container">
+                <div class="category-header">
+                    <h3>COMPETITIONS</h3>
+                </div>
+                <ul class="award-list">
+                    <li class="award-item">
+                        <span class="award-time">2021</span>
+                        <div class="award-content">
+                            <div class="award-title">Provincial First Prize of the National College Students' Mathematical Modeling Competition (National Competition)</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category-container">
+                <div class="category-header">
+                    <h3>SCHOLARSHIPS</h3>
+                </div>
+                <ul class="award-list">
+                    <li class="award-item">
+                        <span class="award-time">2022-2023</span>
+                        <div class="award-content">
+                            <div class="award-title">New Scenery Special Scholarship of Shandong University</div>
+                            <div class="award-description">One of the university's highest honors and scholarships</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="category-container">
+                <div class="category-header">
+                    <h3>HONORS</h3>
+                </div>
+                <ul class="award-list">
+                    <li class="award-item">
+                        <span class="award-time">2021-2022</span>
+                        <div class="award-content">
+                            <div class="award-title">Excellent Individual of Innovation and Entrepreneurship of Shandong University</div>
+                            <div class="award-description">Annual award rate &lt; 5%</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <span class="project-time">Sep 2021 - Dec 2021</span>
-      </div>
-      
-      <div class="project-advisor">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <span>Supervisor: Prof. David Clifton, Computer Vision Group</span>
-      </div>
-      
-      <ul class="project-list">
-        <li>Developed real-time gaze tracking system using <strong>OpenCV</strong> and MediaPipe, achieving 85% accuracy on MIT Eye Dataset</li>
-        <li>Built multi-modal data synchronization pipeline for aligning eye tracking videos with EEG signals</li>
-        <li>Implemented image preprocessing workflow including ROI detection and perspective correction</li>
-        <li>Visualized attention heatmaps through Gaussian kernel density estimation</li>
-      </ul>
-      
-      <div>
-        <span class="project-badge">Real-time Processing</span>
-        <span class="project-badge">Human-Computer Interaction</span>
-      </div>
-    </div>
-
-    <!-- STEM跨学科项目 -->
-    <div class="project-item">
-      <div class="project-header">
-        <div>
-          <h3 class="project-title">Oxford STEM Summer School</h3>
-          <span class="project-subtitle">Interdisciplinary Program</span>
+        
+        <!-- 科研经历部分 -->
+        <h2 class="section-title">RESEARCH EXPERIENCE</h2>
+        
+        <!-- 牛津导师制项目 -->
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-time">Sep 2021 - Dec 2021</span>
+                <div class="project-title-container">
+                    <h3 class="project-title">Oxford Online Tutorial Project</h3>
+                    <span class="project-subtitle">Mentored Research</span>
+                </div>
+                <div class="project-tag">Computer Vision</div>
+            </div>
+            
+            <div class="project-details">
+                <div class="project-advisor">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Supervisor: Prof. David Clifton, Computer Vision Group</span>
+                </div>
+                
+                <ul class="project-list">
+                    <li>Developed real-time gaze tracking system using <strong>OpenCV</strong> and MediaPipe, achieving 85% accuracy on MIT Eye Dataset</li>
+                    <li>Built multi-modal data synchronization pipeline for aligning eye tracking videos with EEG signals</li>
+                    <li>Implemented image preprocessing workflow including ROI detection and perspective correction</li>
+                    <li>Visualized attention heatmaps through Gaussian kernel density estimation</li>
+                </ul>
+                
+                <div>
+                    <span class="project-badge">Real-time Processing</span>
+                    <span class="project-badge">Human-Computer Interaction</span>
+                </div>
+            </div>
         </div>
-        <span class="project-time">Dec 2021 - Dec 2022</span>
-      </div>
-      
-      <ul class="project-list">
-        <li>Collaborated with materials science researchers on microstructure image analysis using <strong>Scikit-image</strong></li>
-        <li>Designed CNN-based classifier for defect detection in SEM images (F1-score 78.5%)</li>
-        <li>Participated in cross-domain workshops with Oxford Robotics Institute on sensor fusion techniques</li>
-        <li>Presented technical report on applications of homography transformation in drone navigation</li>
-      </ul>
-      
-      <div>
-        <span class="project-badge">Cross-domain Collaboration</span>
-        <span class="project-badge">Image Analysis</span>
-      </div>
+        
+        <!-- STEM跨学科项目 -->
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-time">Dec 2021 - Dec 2022</span>
+                <div class="project-title-container">
+                    <h3 class="project-title">Oxford STEM Summer School</h3>
+                    <span class="project-subtitle">Interdisciplinary Program</span>
+                </div>
+                <div class="project-tag">Materials Science</div>
+            </div>
+            
+            <div class="project-details">
+                <ul class="project-list">
+                    <li>Collaborated with materials science researchers on microstructure image analysis using <strong>Scikit-image</strong></li>
+                    <li>Designed CNN-based classifier for defect detection in SEM images (F1-score 78.5%)</li>
+                    <li>Participated in cross-domain workshops with Oxford Robotics Institute on sensor fusion techniques</li>
+                    <li>Presented technical report on applications of homography transformation in drone navigation</li>
+                </ul>
+                
+                <div>
+                    <span class="project-badge">Cross-domain Collaboration</span>
+                    <span class="project-badge">Image Analysis</span>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
+</html>

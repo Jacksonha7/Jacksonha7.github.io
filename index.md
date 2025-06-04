@@ -484,7 +484,7 @@ layout: page
   </div>
   
   <!-- 出版物 -->
-  <h2 class="section-title">PUBLICATIONS</h2>
+  <h2 class="section-title">NEWS</h2>
   
   <div class="publications-container">
     <div class="pub-item">
