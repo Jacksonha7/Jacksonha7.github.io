@@ -196,5 +196,7 @@ I welcome collaborations with scholars working on related topics.<br>
   </div>
 </div>
 
+---
+<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Mf2edNvrXMP-LKR3oRo6m-y46Llurx-ccm_QSyDjnlE"></script>
 <br>
 
