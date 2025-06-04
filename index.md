@@ -10,85 +10,189 @@ I am **​Jianxiang He(何建翔)​**, a MPhil(Master of philosophy) student at
 My current research focuses on ​long-form video understanding, addressing the critical challenge of ​key frame selection in extended videos. By integrating ​key frame search algorithms​ with ​multimodal fusion techniques, I aim to enhance both ​efficiency​ and ​accuracy​ in long-video comprehension systems.
 
 I welcome collaborations with scholars working on related topics.<br>
-<div class="education-section">
-    <h2>Education</h2>
 
-    <!-- 本科教育 -->
-    <div class="education-item">
-        <div class="bordered-container"> <!-- 新增边框容器 -->
-            <div class="two-col-entry">
-                <div class="time-range">Sept 2020 – June 2024</div>
-                <div class="details">
-                    <strong>Shandong University</strong>, Undergraduate, Automation
-                </div>
+---
+
+<div class="education-section">
+    <h2 class="section-title">EDUCATION</h2>
+
+    <!-- 本科教育 - 增强视觉层次 -->
+    <div class="education-card">
+        <div class="edu-header">
+            <span class="edu-time">Sept 2020 – June 2024</span>
+            <div class="edu-title-container">
+                <h3 class="edu-school">Shandong University</h3>
+                <span class="edu-degree">Bachelor of Engineering in Automation</span>
             </div>
+            <div class="edu-tag">Undergraduate</div>
         </div>
-        
-        <div class="one-col-entry">
-            <ul class="highlights">
-                <li><strong>Coursework:</strong> Natural Language Processing, Image Processing, Machine Learning</li>
-            </ul>
+
+        <div class="edu-details">
+            <div class="detail-group">
+                <span class="detail-label">CORE COURSES:</span>
+                <span class="detail-content">Natural Language Processing, Image Processing, Machine Learning</span>
+            </div>
         </div>
     </div>
 
-    <!-- 研究生教育 -->
-    <div class="education-item">
-        <div class="bordered-container"> <!-- 新增边框容器 -->
-            <div class="two-col-entry">
-                <div class="time-range">Sept 2024 – now</div>
-                <div class="details">
-                    <strong>Hong Kong University of Science and Technology (GZ)</strong>, MPhil, AI Thrust
-                </div>
+    <!-- 研究生教育 - 使用悬浮效果和强调色 -->
+    <div class="education-card featured">
+        <div class="edu-header">
+            <span class="edu-time">Sept 2024 – Present</span>
+            <div class="edu-title-container">
+                <h3 class="edu-school">Hong Kong University of Science and Technology (Guangzhou)</h3>
+                <span class="edu-degree">Master of Philosophy in Artificial Intelligence</span>
             </div>
+            <div class="edu-tag">Graduate</div>
         </div>
-        
-        <div class="one-col-entry">
-            <ul class="highlights">
-                <li><strong>Areas of Interest:</strong> Multimodal Large Models, Natural Language Processing, Reinforcement Learning</li>
-            </ul>
+
+        <div class="edu-details">
+            <div class="detail-group">
+                <span class="detail-label">RESEARCH FOCUS:</span>
+                <span class="detail-content">Multimodal Large Models, Natural Language Processing, Reinforcement Learning</span>
+            </div>
+            <div class="detail-group">
+                <span class="detail-label">LAB:</span>
+                <span class="detail-content highlight">AI+ Lab</span>
+            </div>
         </div>
     </div>
 </div>
 
 <style>
-.bordered-container {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 10px;
-    background: #f9f9f9;
-}
-
 .education-section {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    position: relative;
+    color: #2c3e50;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+    margin: 10px auto 0;
+}
+
+.education-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
     margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #ecf0f1;
 }
 
-.two-col-entry {
+.education-card.featured {
+    border-left: 4px solid #3498db;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+}
+
+.edu-header {
     display: flex;
+    align-items: flex-start;
+    padding: 25px 30px;
+    border-bottom: 1px solid #f0f4f8;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.time-range {
-    width: 20%;
+.edu-time {
+    background: #f8f9fa;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: 500;
-    color: #666;
+    color: #7f8c8d;
+    min-width: 180px;
+    text-align: center;
 }
 
-.details {
-    width: 80%;
-    color: #333;
+.edu-title-container {
+    flex: 1;
+    min-width: 250px;
 }
 
-.one-col-entry {
-    margin-bottom: 20px;
+.edu-school {
+    margin: 0 0 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
-.highlights {
-    margin: 8px 0;
-    padding-left: 25px;
+.edu-degree {
+    display: block;
+    font-size: 1.05rem;
+    color: #3498db;
+    font-weight: 500;
 }
 
-.highlights li {
-    margin-bottom: 6px;
+.edu-tag {
+    background: #e8f4fc;
+    color: #3498db;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.edu-details {
+    padding: 25px 30px;
+    background: #f9fbfd;
+}
+
+.detail-group {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.detail-group:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    white-space: nowrap;
+}
+
+.detail-content {
+    font-size: 1.05rem;
+    color: #34495e;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .edu-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .edu-time {
+        align-self: flex-start;
+    }
 }
 </style>
 
@@ -98,7 +202,7 @@ I welcome collaborations with scholars working on related topics.<br>
 
 ## Current Research Interests
 
-- Vision and Language Large Model
+- Multi-modal LLM
 - Reinforcement Learning
 
 <!-- My current research focuses on practical problems that artificial intelligence faces in real life. My interests are on the Machine Learning and its applications in Industrial IoT. In a word, advanced technologies like ML and IoT positively influence the life of everybody.  I wish to devote my talent to this meaningful cause and bring well-being to society. -->
@@ -111,90 +215,24 @@ I welcome collaborations with scholars working on related topics.<br>
   <ul class="timeline">
     <!-- 已发表论文 -->
     <li>
+      <strong>ACL 2025</strong>
+      <div class="pub-item">
+        <a href="#"><em>A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges</em></a>
+        <div class="authors"><u>Yibo Yan, Jiamin Su, **Jianxiang He**, et al.</div>
+      </div>
+    </li>
+    <li>
       <strong>IEEE ROBIO 2022</strong>
       <div class="pub-item">
         <a href="#"><em>The development of spiking neural network: A review</em></a>
         <div class="authors"><u>Jianxiang He</u>, Yanzi Li, Yingtian Liu, et al.</div>
-        <!-- <p>系统综述了脉冲神经网络（SNN）的四大核心模块（神经元模型、编码方法、网络架构与学习算法），对比了Hodgkin-Huxley、LIF等模型的生物解释性与计算效率...</p> -->
       </div>
     </li>
 
-    <!-- 在审论文统一模板 -->
-    <li>
-      <strong>Under Review · ACL 2025</strong>
-      <div class="pub-item">
-        <a href="#"><em>A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model</em></a>
-        <div class="authors">Yibo Yan, Jiaming Su, <u>Jianxiang He</u>, et al.</div>
-        <!-- <p>系统整合了200+项研究，提出涵盖问题求解、定理证明与错误诊断的多任务评估体系...</p> -->
-      </div>
-    </li>
 
-    <li>
-      <strong>Under Review · IJCAI 2025</strong>
-      <div class="pub-item">
-        <a href="#"><em>A Survey of fMRI to Image Reconstruction</em></a>
-        <div class="authors">Weiyu Guo, Guoying Sun, <u>Jianxiang He</u>, et al.</div>
-        <!-- <p>首次提出并系统梳理了fMRI到图像重建（fMRI2Image）领域的完整方法论框架...</p> -->
-      </div>
-    </li>
-
-    <li>
-      <strong>Under Review · ICCV 2025</strong>
-      <div class="pub-item">
-        <a href="#"><em>Logic-in-Frames: Dynamic keyframe search through visual semantic-logic verification for long video understanding</em></a>
-        <div class="authors">Weiyu Guo, Ziyang Chen, Shaoguang Wang, <u>Jianxiang He</u>, et al.</div>
-        <!-- <p>提出VSLS视觉语义逻辑搜索框架，首次在长视频理解中引入四类语义逻辑关系...</p> -->
-      </div>
-    </li>
   </ul>
 </div>
 ---
-
-<div class="research-experience">
-  <h2>EarlyResearch Experience</h2>
-
-  <!-- 牛津导师制项目 -->
-  <div class="project">
-    <div class="project-header">
-      <h3>Oxford Online Tutorial Project 
-        <span class="subtitle">(Mentored Research)</span></h3>
-      <span class="time">Sep 2021 - Dec 2021</span>
-    </div>
-    <div class="advisor">
-      <i class="fas fa-chalkboard-teacher"></i>
-      Supervisor: Prof. David Clifton, Computer Vision Group
-    </div>
-    <ul class="tech-list">
-      <li>Developed real-time gaze tracking system using <strong>OpenCV</strong> and MediaPipe, achieving 85% accuracy on MIT Eye Dataset</li>
-      <li>Built multi-modal data synchronization pipeline for aligning eye tracking videos with EEG signals</li>
-      <li>Implemented image preprocessing workflow including ROI detection and perspective correction</li>
-      <li>Visualized attention heatmaps through Gaussian kernel density estimation</li>
-    </ul>
-    <div class="achievement">
-      <span class="badge">Real-time Processing</span>
-      <span class="badge">Human-Computer Interaction</span>
-    </div>
-  </div>
-
-  <!-- STEM跨学科项目 -->
-  <div class="project">
-    <div class="project-header">
-      <h3>Oxford STEM Summer School 
-        <span class="subtitle">(Interdisciplinary Program)</span></h3>
-      <span class="time">Dec 2021 - Dec 2022</span>
-    </div>
-    <ul class="tech-list">
-      <li>Collaborated with materials science researchers on microstructure image analysis using <strong>Scikit-image</strong></li>
-      <li>Designed CNN-based classifier for defect detection in SEM images (F1-score 78.5%)</li>
-      <li>Participated in cross-domain workshops with Oxford Robotics Institute on sensor fusion techniques</li>
-      <li>Presented technical report on applications of homography transformation in drone navigation</li>
-    </ul>
-    <div class="achievement">
-      <span class="badge">Cross-domain Collaboration</span>
-      <span class="badge">Image Analysis</span>
-    </div>
-  </div>
-</div>
 
 ---
 <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Mf2edNvrXMP-LKR3oRo6m-y46Llurx-ccm_QSyDjnlE"></script>
