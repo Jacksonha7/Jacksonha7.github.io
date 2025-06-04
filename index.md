@@ -378,17 +378,16 @@ layout: page
   
   <div class="about-card">
     <div class="profile-header">
-      <div class="avatar-container"></div>
       <div class="profile-info">
         <div class="name">Jianxiang He <span>何建翔</span></div>
-        <div class="position">MPhil Candidate in Artificial Intelligence</div>
+        <div class="position">MPhil in Artificial Intelligence</div>
         <div class="research-highlight">
-          Researching multimodal AI at HKUST(GZ) AI+ Lab, focusing on video understanding and efficiency optimization
+          Researching multimodal AI at HKUST(GZ) AI+ Lab/HKUST-GZ NLP Group, focusing on video understanding and efficiency optimization
         </div>
         
         <div class="contact-info">
           <div class="contact-item">
-            <i class="fas fa-envelope"></i> your.email@connect.ust.hk
+            <i class="fas fa-envelope"></i> jhe307@connect.hkust-gz.edu.cn
           </div>
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i> Hong Kong University of Science and Technology (Guangzhou)
@@ -490,13 +489,13 @@ layout: page
   <div class="publications-container">
     <div class="pub-item">
       <div class="pub-header">ACL 2025</div>
-      <a href="#" class="pub-title">A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges</a>
+      <a href="https://arxiv.org/abs/2412.11936" class="pub-title">A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges</a>
       <div class="pub-authors">Yibo Yan, Jiamin Su, <strong>Jianxiang He</strong>, et al.</div>
     </div>
     
     <div class="pub-item">
       <div class="pub-header">IEEE ROBIO 2022</div>
-      <a href="#" class="pub-title">The development of spiking neural network: A review</a>
+      <a href="https://ieeexplore.ieee.org/document/10012028" class="pub-title">The development of spiking neural network: A review</a>
       <div class="pub-authors"><strong>Jianxiang He</strong>, Yanzi Li, Yingtian Liu, et al.</div>
     </div>
   </div>
