@@ -451,7 +451,7 @@ layout: page
         </div>
         <div class="detail-group">
           <span class="detail-label">LAB:</span>
-          <span class="detail-content highlight">AI+ Lab</span>
+          <span class="detail-content">AI+ Lab/HKUST-GZ NLP Group</span>
         </div>
       </div>
     </div>

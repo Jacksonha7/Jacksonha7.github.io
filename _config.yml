@@ -1,40 +1,14 @@
 title: Jianxiang He
-# tagline: Here is personal website of Hanlin Cai. Powered by Jekyll, based on the Minimal Mistakes theme.
-# description: Two roads diverged in woods, I took the one less traveled by.
-#Comment out url when working locally to resolve base urls correctly
 url: https://Jacksonha7.github.io/
 
-# Owner/author information
 owner:
   name: Jianxiang He
   avatar: jianxiang.jpg
-  # bio: Two roads diverged in woods, I took the one less traveled by.
   email: jhe307@connect.hkust-gz.edu.cn
   cv: https://Jacksonha7.com/file/CV-Hejianxiang.pdf
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  # twitter: lancecai2002
   github: Jacksonha7
-  # linkedin: hanlincai
   scholar: https://scholar.google.com.hk/citations?user=6ZJXY_EAAAAJ&hl=zh-CN
-  # bilibili: 594030035
-  # researchgate: https://www.researchgate.net/profile/Hanlin-Cai
-  # zhihu: https://www.zhihu.com/people/chlire
-  # facebook: caihanlin2002
-  # instagram: lancecai2002
-  # lastfm:
-  # tumblr:
-  # For Google Authorship https://plus.google.com/authorship
-  # google_plus:
 
-# Analytics and webmaster tools stuff goes here
-# https://search.google.com/search-console/ownership
-# google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
-
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-# bing_verify: ""
-
-# Links to include in top navigation
-# For external links add external: true
 links:
   - title: About Me
     url: /
@@ -42,14 +16,7 @@ links:
     url: /publications/
   - title: Awards
     url: /awards/
-  # - title: Hobbies
-  #   url: /hobbies/
-  # # - title: Startups
-  #   # url: /startups/
-  # - title: Blogs
-  #   url: /blogs/
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: China/Guangzhou
 future: true
 highlighter: rouge
