@@ -5,8 +5,11 @@ layout: page
 # About Me
 
 <!-- <img src="https://caihanlin.com/caihanlin.jpg" class="floatpic"> -->
+I am **​Jianxiang He(何建翔)​**, a MPhil(Master of philosophy) student at the ​Hong Kong University of Science and Technology (Guangzhou)​. My research is supervised by ​Professor Hui Xiong​ (Fellow of AAAS, IEEE, CAAI, and AAAI) and ​Assistant Professor Xuming Hu. I am affiliated with the ​AI+ Lab/HKUST-GZ NLP Group, specializing in ​multimodal large language models​ and ​reinforcement learning.
 
-Here is **Jianxiang He (Jackson, 何建翔)**.<br>
+My current research focuses on ​long-form video understanding, addressing the critical challenge of ​key frame selection in extended videos. By integrating ​key frame search algorithms​ with ​multimodal fusion techniques, I aim to enhance both ​efficiency​ and ​accuracy​ in long-video comprehension systems.
+
+I welcome collaborations with scholars working on related topics.<br>
 <div class="education-section">
     <h2>Education</h2>
 
@@ -148,7 +151,7 @@ Here is **Jianxiang He (Jackson, 何建翔)**.<br>
 ---
 
 <div class="research-experience">
-  <h2>Early Research Experience</h2>
+  <h2>EarlyResearch Experience</h2>
 
   <!-- 牛津导师制项目 -->
   <div class="project">
