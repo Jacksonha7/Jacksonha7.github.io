@@ -261,7 +261,6 @@ title: Awards
             }
         }
     </style>
-</head>
 <body>
     <div class="page-container">
         <!-- 主标题 -->
@@ -375,4 +374,3 @@ title: Awards
         </div>
     </div>
 </body>
-</html>
