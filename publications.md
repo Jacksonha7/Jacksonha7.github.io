@@ -286,7 +286,7 @@ title: Publications
                     <a href="https://arxiv.org/pdf/2508.03337">Less is More: Token-Efficient Video-QA via Adaptive Frame-Pruning and Semantic Graph Integration</a>
                 </h3>
                 <div class="pub-authors">
-                    Shaoguang Wang, <span class="author-highlight">Shaoguang Wang, Jianxiang He, Yijie Xu, Ziyang Chen, Weiyu Guo, Hui Xiong
+                    Shaoguang Wang, <span class="author-highlight">Jianxiang He</span>, Yijie Xu, Ziyang Chen, Weiyu Guo, Hui Xiong
                 </div>
                 <div class="pub-venue">Submitted to AAAI 2026</div>
                 <div class="pub-status status-submitted">Submitted</div>
