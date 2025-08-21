@@ -261,12 +261,12 @@ title: Publications
             <!-- 论文1 -->
             <div class="pub-item">
                 <h3 class="pub-title">
-                    <a href="#">Beyond Visual Semantics: Dynamic Keyframe Search via Multimodal Syntactic Alignment</a>
+                    <a href="https://arxiv.org/pdf/2508.06869">VSI: Visual Subtitle Integration for Keyframe Selection to enhance Long Video Understanding</a>
                 </h3>
                 <div class="pub-authors">
-                    <span class="author-highlight">Jianxiang He</span>, Shaoguang Wang, Jungang Li, Meisheng Hong
+                    <span class="author-highlight">Jianxiang He</span>, Shaoguang Wang, Weiyu Guo, Meisheng Hong, Jungang Li, Yijie Xu, Ziyang Chen, Hui Xiong
                 </div>
-                <div class="pub-venue">Submitted to AAAI 2025</div>
+                <div class="pub-venue">Submitted to AAAI 2026</div>
                 <div class="pub-status status-submitted">Submitted</div>
                 <div class="pub-tag">Video Understanding</div>
                 <div class="pub-tag">Keyframe Selection</div>
@@ -283,12 +283,12 @@ title: Publications
             <!-- 论文2 -->
             <div class="pub-item">
                 <h3 class="pub-title">
-                    <a href="#">Visual-Clustering: Efficient Keyframe Reduction and Semantic Graph Construction for Enhanced Video Understanding</a>
+                    <a href="https://arxiv.org/pdf/2508.03337">Less is More: Token-Efficient Video-QA via Adaptive Frame-Pruning and Semantic Graph Integration</a>
                 </h3>
                 <div class="pub-authors">
-                    Shaoguang Wang, <span class="author-highlight">Jianxiang He</span>, Jungang Li, Meisheng Hong
+                    Shaoguang Wang, <span class="author-highlight">Shaoguang Wang, Jianxiang He, Yijie Xu, Ziyang Chen, Weiyu Guo, Hui Xiong
                 </div>
-                <div class="pub-venue">Submitted to AAAI 2025</div>
+                <div class="pub-venue">Submitted to AAAI 2026</div>
                 <div class="pub-status status-submitted">Submitted</div>
                 <div class="pub-tag">Video Summarization</div>
                 <div class="pub-tag">Efficiency Optimization</div>
