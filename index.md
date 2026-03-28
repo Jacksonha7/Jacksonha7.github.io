@@ -3,514 +3,314 @@ layout: page
 ---
 
 <style>
-/* ===== 全局样式 ===== */
+:root {
+  --primary: #2563eb;
+  --secondary: #7c3aed;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --card-bg: rgba(255, 255, 255, 0.92);
+  --border-soft: rgba(37, 99, 235, 0.14);
+}
+
 .page-container {
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  max-width: 900px;
+  max-width: 980px;
   margin: 0 auto;
-  color: #2c3e50;
   padding: 0 20px 60px;
+  color: var(--text-main);
+  font-family: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+.hero {
+  margin-top: 12px;
+  padding: 34px;
+  border-radius: 22px;
+  background:
+    radial-gradient(1200px 300px at -10% 0%, rgba(37, 99, 235, 0.14), transparent 70%),
+    radial-gradient(1000px 400px at 110% 100%, rgba(124, 58, 237, 0.14), transparent 72%),
+    #f8fbff;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+}
+
+.hero-headline {
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  margin: 0;
+  letter-spacing: 0.2px;
+}
+
+.hero-subline {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.badge-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background: white;
+  color: #1e3a8a;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.84rem;
+  font-weight: 600;
 }
 
 .section-title {
+  margin: 42px 0 18px;
+  font-size: 1.5rem;
   position: relative;
-  padding-bottom: 15px;
-  margin: 45px 0 25px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #2c3e50;
+  padding-left: 14px;
 }
 
-.section-title:after {
-  content: '';
+.section-title::before {
+  content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 70px;
-  height: 3px;
-  background: linear-gradient(to right, #3498db, #9b59b6);
-  border-radius: 3px;
+  top: 5px;
+  bottom: 5px;
+  width: 4px;
+  border-radius: 99px;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
 }
 
-/* ===== 关于部分 ===== */
-.about-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-  padding: 35px 40px;
-  margin-bottom: 40px;
-}
-
-.profile-header {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.avatar-container {
-  border-radius: 8px;
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border: 3px solid white;
-  background: #f8f9fa url('placeholder-avatar.jpg') center/cover; /* 替换为实际头像URL */
-}
-
-.profile-info {
-  flex: 1;
-  min-width: 300px;
-}
-
-.name {
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin: 0 0 5px;
-  color: #2c3e50;
-}
-
-.name span {
-  color: #7f8c8d;
-  font-weight: 400;
-  font-size: 1.6rem;
-}
-
-.position {
-  font-size: 1.25rem;
-  color: #3498db;
-  margin-bottom: 12px;
-  font-weight: 500;
-}
-
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.95rem;
-}
-
-.contact-item i {
-  margin-right: 8px;
-  color: #3498db;
-}
-
-.research-intro {
-  line-height: 1.7;
-  font-size: 1.08rem;
-  color: #34495e;
-  margin-bottom: 25px;
-}
-
-.research-highlight {
-  background: linear-gradient(120deg, rgba(52, 152, 219, 0.1) 0%, transparent 100%);
-  border-left: 3px solid #3498db;
-  padding: 15px 20px;
-  border-radius: 0 6px 6px 0;
-  margin: 20px 0;
-  font-weight: 500;
-  color: #2c3e50;
-}
-
-/* ===== 教育部分 ===== */
-.education-section {
-  margin-top: 25px;
-}
-
-.education-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  overflow: hidden;
-  margin-bottom: 25px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-left: 4px solid #ecf0f1;
-}
-
-.education-card.featured {
-  border-left: 4px solid #3498db;
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
-}
-
-.edu-header {
-  display: flex;
-  align-items: flex-start;
-  padding: 22px 25px;
-  border-bottom: 1px solid #f0f4f8;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.edu-time {
-  background: #f8f9fa;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #7f8c8d;
-  min-width: 170px;
-  text-align: center;
-}
-
-.edu-title-container {
-  flex: 1;
-  min-width: 250px;
-}
-
-.edu-school {
-  margin: 0 0 5px;
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: #2c3e50;
-}
-
-.edu-degree {
-  display: block;
-  font-size: 1.05rem;
-  color: #3498db;
-  font-weight: 500;
-}
-
-.edu-tag {
-  background: #e8f4fc;
-  color: #3498db;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-.edu-details {
-  padding: 22px 25px;
-  background: #f9fbfd;
-}
-
-.detail-group {
-  display: flex;
-  margin-bottom: 12px;
-  align-items: baseline;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.detail-label {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: #2c3e50;
-  white-space: nowrap;
-}
-
-.detail-content {
-  font-size: 1.05rem;
-  color: #34495e;
-  line-height: 1.5;
-}
-
-.highlight {
-  color: #e74c3c;
-  font-weight: 500;
-}
-
-/* ===== 研究兴趣 ===== */
-.interests-section {
+.grid-2 {
   display: grid;
+  gap: 18px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin: 30px 0;
 }
 
-.interest-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  padding: 25px;
-  transition: transform 0.3s ease;
-  position: relative;
-  overflow: hidden;
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(4px);
 }
 
-.interest-card:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(to right, #3498db, #9b59b6);
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 1.18rem;
 }
 
-.interest-card:hover {
-  transform: translateY(-5px);
-}
-
-.interest-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.interest-desc {
-  font-size: 1rem;
+.card p {
+  margin: 0;
   line-height: 1.7;
-  color: #34495e;
+  color: var(--text-muted);
 }
 
-/* ===== 出版物 ===== */
-.publications-container {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-  padding: 30px;
-  margin: 30px 0;
-}
-
-.pub-item {
-  padding: 18px 0;
-  border-bottom: 1px dashed #eee;
-}
-
-.pub-item:last-child {
-  border-bottom: none;
-}
-
-.pub-header {
+.notice-bar {
+  margin-top: 18px;
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid rgba(234, 88, 12, 0.28);
+  background: linear-gradient(120deg, #fff7ed, #fff);
+  color: #9a3412;
   font-weight: 600;
-  font-size: 1.05rem;
-  color: #e74c3c;
+}
+
+.timeline {
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 18px 20px 16px 22px;
+  border-left: 3px solid #c7d2fe;
+  border-radius: 0 14px 14px 0;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.05);
+}
+
+.timeline-item.current {
+  border-left-color: var(--primary);
+}
+
+.timeline-time {
+  font-size: 0.84rem;
+  color: #475569;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
-.pub-title {
-  font-size: 1.15rem;
-  font-style: italic;
-  color: #2c3e50;
-  margin-bottom: 6px;
+.timeline-title {
+  margin: 0;
+  font-size: 1.08rem;
+}
+
+.timeline-meta {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.news-list {
+  display: grid;
+  gap: 12px;
+}
+
+.news-item {
+  background: #fff;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.news-item .tag {
+  display: inline-block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #0c4a6e;
+  background: #e0f2fe;
+  padding: 4px 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.news-title {
   display: block;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 6px;
 }
 
-.pub-authors {
-  color: #7f8c8d;
-  font-size: 0.95rem;
+.news-authors {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.94rem;
 }
 
-/* ===== 通知栏 ===== */
-.notice-bar {
-  background: linear-gradient(120deg, #ffefef 0%, #fff9f9 100%);
-  border-left: 4px solid #c0392b;
-  padding: 18px 25px;
-  border-radius: 0 6px 6px 0;
-  margin: 30px 0;
-  color: #c0392b;
-  font-weight: 500;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-}
-
-.notice-bar i {
-  font-size: 1.4rem;
-  margin-right: 15px;
-  flex-shrink: 0;
-}
-
-/* ===== 地图容器 ===== */
 .map-container {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-  padding: 25px;
-  margin: 50px 0 30px;
+  margin-top: 26px;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  padding: 18px;
   text-align: center;
+  background: #fff;
 }
 
 .map-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 15px;
+  margin: 0 0 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #334155;
+  letter-spacing: 0.3px;
 }
 
-/* ===== 响应式设计 ===== */
-@media (max-width: 768px) {
-  .profile-header {
-    flex-direction: column;
-  }
-  
-  .avatar-container {
-    margin: 0 auto;
-  }
-  
-  .edu-header {
-    flex-direction: column;
-    gap: 12px;
-  }
-  
-  .edu-time {
-    align-self: flex-start;
-  }
-  
-  .contact-info {
-    flex-direction: column;
-    gap: 10px;
-  }
+.contact-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
 }
 
-@media (max-width: 480px) {
-  .about-card, .education-card, .publications-container {
-    padding: 25px 20px;
+.contact-line {
+  color: #334155;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 24px;
+  }
+
+  .card,
+  .timeline-item {
+    padding: 16px;
   }
 }
 </style>
 
 <div class="page-container">
-  <!-- 关于部分 -->
-  <h2 class="section-title">ABOUT ME</h2>
-  
-  <div class="about-card">
-    <div class="profile-header">
-      <div class="profile-info">
-        <div class="name">Jianxiang He <span>何建翔</span></div>
-        <div class="position">MPhil in Artificial Intelligence</div>
-        <div class="research-highlight">
-          Researching multimodal AI at HKUST(GZ) AI+ Lab/HKUST-GZ NLP Group, focusing on video understanding and efficiency optimization
-        </div>
-        
-        <div class="contact-info">
-          <div class="contact-item">
-            <i class="fas fa-envelope"></i> jhe307@connect.hkust-gz.edu.cn
-          </div>
-          <div class="contact-item">
-            <i class="fas fa-map-marker-alt"></i> Hong Kong University of Science and Technology (Guangzhou)
-          </div>
-        </div>
-      </div>
+  <section class="hero">
+    <h1 class="hero-headline">Jianxiang He / 何建翔</h1>
+    <p class="hero-subline">
+      MPhil in Artificial Intelligence at HKUST(GZ), currently working on multimodal large language models,
+      long video understanding, and efficient key-frame selection.
+    </p>
+    <div class="badge-row">
+      <span class="badge">Multimodal LLM</span>
+      <span class="badge">Video Understanding</span>
+      <span class="badge">Reinforcement Learning</span>
+      <span class="badge">NLP</span>
     </div>
-    
-    <div class="research-intro">
-      <p>I am a Master of Philosophy student at the Hong Kong University of Science and Technology (Guangzhou). My research is supervised by Professor <strong>Hui Xiong</strong> (Fellow of AAAS, IEEE, CAAI, and AAAI) and Assistant Professor <strong>Xuming Hu</strong>. I am affiliated with the <strong>AI+ Lab/HKUST-GZ NLP Group</strong>, specializing in multimodal large language models and reinforcement learning.</p>
-      
-      <p>My current research focuses on <strong>long video understanding</strong>, addressing the critical challenge of key frame selection in extended videos. By integrating key frame search algorithms with multimodal fusion techniques, I aim to enhance both efficiency and accuracy in long-video comprehension systems.</p>
-      
-      <p>I welcome collaborations with scholars working on related topics and enjoy exploring interdisciplinary applications of AI technologies.</p>
+    <div class="contact-grid">
+      <p class="contact-line"><strong>Email:</strong> jhe307@connect.hkust-gz.edu.cn</p>
+      <p class="contact-line"><strong>Affiliation:</strong> AI+ Lab / HKUST-GZ NLP Group</p>
     </div>
-    
     <div class="notice-bar">
-      <i class="fas fa-bullhorn"></i>
-      <div>I am actively seeking a PhD position for 2026 Fall admission. Please contact me if you have relevant information or opportunities!</div>
+      I am actively seeking a PhD position for Fall 2026. Feel free to reach out for collaboration or opportunities.
     </div>
-  </div>
-  
-  <!-- 教育部分 -->
-  <h2 class="section-title">EDUCATION</h2>
-  
-  <div class="education-section">
-    <!-- 本科教育 -->
-    <div class="education-card">
-      <div class="edu-header">
-        <span class="edu-time">Sept 2020 – June 2024</span>
-        <div class="edu-title-container">
-          <h3 class="edu-school">Shandong University</h3>
-          <span class="edu-degree">Bachelor of Engineering in Automation</span>
-        </div>
-        <div class="edu-tag">Undergraduate</div>
-      </div>
+  </section>
 
-      <div class="edu-details">
-        <div class="detail-group">
-          <span class="detail-label">CORE COURSES:</span>
-          <span class="detail-content">Natural Language Processing, Image Processing, Machine Learning</span>
-        </div>
-      </div>
-    </div>
+  <h2 class="section-title">About</h2>
+  <div class="card">
+    <p>
+      I am a Master of Philosophy student at the Hong Kong University of Science and Technology (Guangzhou),
+      advised by Professor <strong>Hui Xiong</strong> and Assistant Professor <strong>Xuming Hu</strong>.
+      My current research focuses on long-video understanding, where I explore key-frame selection and multimodal
+      fusion strategies to improve both efficiency and reasoning quality.
+    </p>
+  </div>
 
-    <!-- 研究生教育 -->
-    <div class="education-card featured">
-      <div class="edu-header">
-        <span class="edu-time">Sept 2024 – Present</span>
-        <div class="edu-title-container">
-          <h3 class="edu-school">Hong Kong University of Science and Technology (Guangzhou)</h3>
-          <span class="edu-degree">Master of Philosophy in Artificial Intelligence</span>
-        </div>
-        <div class="edu-tag">Graduate</div>
-      </div>
+  <h2 class="section-title">Education</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-time">Sept 2020 – June 2024</div>
+      <h3 class="timeline-title">Shandong University</h3>
+      <p class="timeline-meta">B.E. in Automation · Core courses in NLP, image processing, and machine learning.</p>
+    </div>
+    <div class="timeline-item current">
+      <div class="timeline-time">Sept 2024 – Present</div>
+      <h3 class="timeline-title">Hong Kong University of Science and Technology (Guangzhou)</h3>
+      <p class="timeline-meta">MPhil in AI · Focused on Multimodal LLMs, NLP, and reinforcement learning.</p>
+    </div>
+  </div>
 
-      <div class="edu-details">
-        <div class="detail-group">
-          <span class="detail-label">RESEARCH FOCUS:</span>
-          <span class="detail-content">Multimodal Large Models, Natural Language Processing, Reinforcement Learning</span>
-        </div>
-        <div class="detail-group">
-          <span class="detail-label">LAB:</span>
-          <span class="detail-content">AI+ Lab/HKUST-GZ NLP Group</span>
-        </div>
-      </div>
-    </div>
+  <h2 class="section-title">Research Interests</h2>
+  <div class="grid-2">
+    <article class="card">
+      <h3>Multimodal LLM</h3>
+      <p>Building unified systems that align language, vision, and audio for robust real-world understanding.</p>
+    </article>
+    <article class="card">
+      <h3>Reinforcement Learning</h3>
+      <p>Designing adaptive optimization strategies for sequential decision-making and efficient policy learning.</p>
+    </article>
+    <article class="card">
+      <h3>Video Understanding</h3>
+      <p>Studying temporal reasoning and sparse key-frame retrieval in long videos for scalable model inference.</p>
+    </article>
+    <article class="card">
+      <h3>Applied NLP</h3>
+      <p>Exploring efficient and reliable language technologies for research, education, and productivity tools.</p>
+    </article>
   </div>
-  
-  <!-- 研究兴趣 -->
-  <h2 class="section-title">RESEARCH INTERESTS</h2>
-  
-  <div class="interests-section">
-    <div class="interest-card">
-      <h3 class="interest-title">Multi-modal LLM</h3>
-      <div class="interest-desc">
-        Exploring unified architectures that integrate visual, textual, and auditory information for more comprehensive AI systems that better understand the complex real world.
-      </div>
-    </div>
-    
-    <div class="interest-card">
-      <h3 class="interest-title">Reinforcement Learning</h3>
-      <div class="interest-desc">
-        Developing adaptive learning algorithms for sequential decision-making processes, with applications in robotics, automation, and intelligent systems.
-      </div>
-    </div>
-    
-    <div class="interest-card">
-      <h3 class="interest-title">Video Understanding</h3>
-      <div class="interest-desc">
-        Creating efficient algorithms for temporal modeling and key-frame selection in long-duration videos, enabling advanced content analysis and retrieval systems.
-      </div>
-    </div>
+
+  <h2 class="section-title">News & Publications</h2>
+  <div class="news-list">
+    <article class="news-item">
+      <span class="tag">ACL 2025</span>
+      <a class="news-title" href="https://arxiv.org/abs/2412.11936">A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method &amp; Challenges</a>
+      <p class="news-authors">Yibo Yan, Jiamin Su, <strong>Jianxiang He</strong>, et al.</p>
+    </article>
+    <article class="news-item">
+      <span class="tag">IEEE ROBIO 2022</span>
+      <a class="news-title" href="https://ieeexplore.ieee.org/document/10012028">The development of spiking neural network: A review</a>
+      <p class="news-authors"><strong>Jianxiang He</strong>, Yanzi Li, Yingtian Liu, et al.</p>
+    </article>
   </div>
-  
-  <!-- 出版物 -->
-  <h2 class="section-title">NEWS</h2>
-  
-  <div class="publications-container">
-    <div class="pub-item">
-      <div class="pub-header">ACL 2025</div>
-      <a href="https://arxiv.org/abs/2412.11936" class="pub-title">A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges</a>
-      <div class="pub-authors">Yibo Yan, Jiamin Su, <strong>Jianxiang He</strong>, et al.</div>
-    </div>
-    
-    <div class="pub-item">
-      <div class="pub-header">IEEE ROBIO 2022</div>
-      <a href="https://ieeexplore.ieee.org/document/10012028" class="pub-title">The development of spiking neural network: A review</a>
-      <div class="pub-authors"><strong>Jianxiang He</strong>, Yanzi Li, Yingtian Liu, et al.</div>
-    </div>
-  </div>
-  
-  <!-- 访客地图 -->
+
   <div class="map-container">
-    <div class="map-title">VISITOR LOCATIONS</div>
+    <p class="map-title">Visitor Locations</p>
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Mf2edNvrXMP-LKR3oRo6m-y46Llurx-ccm_QSyDjnlE"></script>
   </div>
 </div>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
----
-
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Mf2edNvrXMP-LKR3oRo6m-y46Llurx-ccm_QSyDjnlE"></script>
-<br>
-
