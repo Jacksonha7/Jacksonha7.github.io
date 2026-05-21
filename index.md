@@ -412,17 +412,17 @@ layout: page
 
 <script>
 (function () {
-  var authorId = "2347022035";
   var statsEl = document.getElementById("scholar-stats");
 
-  fetch("https://api.semanticscholar.org/graph/v1/author/" + authorId + "?fields=citationCount,hIndex,paperCount")
+  fetch("/assets/data/scholar_stats.json?_=" + Date.now())
     .then(function (r) { return r.json(); })
     .then(function (data) {
       statsEl.innerHTML = [
-        stat(data.citationCount, "Citations"),
-        stat(data.hIndex, "h-index"),
-        stat(data.paperCount, "Papers"),
-      ].join("");
+        stat(data.citations, "Citations"),
+        stat(data.h_index, "h-index"),
+        stat(data.i10_index, "i10-index"),
+      ].join("") +
+        '<div class="scholar-stat" style="font-size:0.75rem;color:#94a3b8;align-self:flex-end">Updated ' + data.updated_at + '</div>';
     })
     .catch(function () {
       statsEl.innerHTML = '<span class="scholar-loading"><a href="https://scholar.google.com/citations?user=6ZJXY_EAAAAJ" target="_blank">View on Google Scholar ↗</a></span>';
