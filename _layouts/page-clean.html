@@ -130,39 +130,52 @@
   /* ── Page Header ─────────────────────────────── */
   .ph {
     margin-top: 62px;
-    padding: 52px 48px 36px;
-    background: linear-gradient(135deg, #f8faff 0%, #eef3ff 100%);
-    border-bottom: 1px solid #e0e8ff;
+    padding: 60px 48px 44px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
   }
   .ph-inner {
     max-width: 860px;
     margin: 0 auto;
   }
-  .ph h1 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 800;
-    color: #0a0a1a;
-    letter-spacing: -0.2px;
-    line-height: 1.2;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .ph-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 14px;
   }
-  .ph h1::before {
-    content: '';
-    display: inline-block;
-    width: 5px; height: 28px;
-    background: linear-gradient(180deg, #0055cc, #7c3aed);
-    border-radius: 3px;
-    flex-shrink: 0;
+  .ph h1 {
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 600;
+    color: #0a0a0a;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
   }
 
   /* ── Content ─────────────────────────────────── */
   .pc {
     max-width: 860px;
     margin: 0 auto;
-    padding: 40px 48px 80px;
+    padding: 48px 48px 100px;
   }
+
+  /* ── Shared section label ────────────────────── */
+  .sec-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  /* ── p+p override ────────────────────────────── */
+  .pc p { text-indent: 0 !important; }
+  .pc p + p { margin-top: 0 !important; }
 
   /* ── Reveal animation ─────────────────────────── */
   .reveal {
@@ -224,6 +237,7 @@
   <!-- ── Page Header ── -->
   <div class="ph">
     <div class="ph-inner">
+      <p class="ph-eyebrow">Jianxiang He &nbsp;·&nbsp; Academic Portfolio</p>
       <h1>{{ page.title }}</h1>
     </div>
   </div>

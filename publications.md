@@ -4,419 +4,228 @@ permalink: /publications/index.html
 title: Publications
 ---
 
-
 <style>
-        /* ===== 全局样式 ===== */
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px 60px;
-        }
+/* ── Pub section ─────────────────────────────── */
+.pub-section { margin-bottom: 56px; }
 
-        .section-title {
-            position: relative;
-            padding-bottom: 15px;
-            margin: 45px 0 25px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            color: #2c3e50;
-        }
+.pub-section-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #bbb;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 0;
+}
 
-        .section-title:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 70px;
-            height: 3px;
-            background: linear-gradient(to right, #3498db, #9b59b6);
-            border-radius: 3px;
-        }
+/* ── Pub row ─────────────────────────────────── */
+.pub-row {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 0 24px;
+  padding: 26px 0;
+  border-bottom: 1px solid #f6f6f6;
+  transition: background 0.18s;
+  margin-left: -12px;
+  padding-left: 12px;
+  border-radius: 6px;
+}
+.pub-row:last-child { border-bottom: none; }
+.pub-row:hover { background: #fafafa; }
 
-        /* ===== 卡片样式 ===== */
-        .content-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-            padding: 35px 40px;
-            margin-bottom: 40px;
-        }
+/* Badge column */
+.pub-badge-col { padding-top: 4px; }
+.pb {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+.pb-green  { background: #ecfdf5; color: #059669; }
+.pb-orange { background: #fff7ed; color: #c2410c; }
+.pb-blue   { background: #eff6ff; color: #1d4ed8; }
+.pb-gray   { background: #f5f5f5; color: #888; }
 
-        .pub-header {
-            position: relative;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-        }
+/* Content column */
+.pub-title {
+  font-size: 0.94rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+.pub-title a {
+  color: #111;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  transition: color 0.2s, gap 0.2s;
+}
+.pub-title a::after {
+  content: '→';
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: opacity 0.2s, transform 0.2s;
+  display: inline-block;
+  line-height: 1;
+}
+.pub-title a:hover { color: #0055cc; gap: 5px; }
+.pub-title a:hover::after { opacity: 1; transform: translateX(0); }
 
-        .pub-header h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 0;
-        }
+.pub-authors {
+  font-size: 0.8rem;
+  color: #aaa;
+  line-height: 1.65;
+  margin-bottom: 4px;
+}
+.pub-authors strong { color: #555; font-weight: 600; }
 
-        .pub-header:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 2px;
-            background: linear-gradient(to right, #3498db, #9b59b6);
-            border-radius: 2px;
-        }
+.pub-venue {
+  font-size: 0.78rem;
+  color: #ccc;
+  font-style: italic;
+  margin-bottom: 10px;
+}
 
-        /* ===== 出版物项目 ===== */
-        .pub-item {
-            padding: 22px 0;
-            border-bottom: 1px dashed #eee;
-            position: relative;
-        }
+.pub-links { display: flex; gap: 18px; }
+.pub-link {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #ccc;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.18s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.pub-link:hover { color: #111; }
+.pub-link i { font-size: 0.72rem; }
 
-        .pub-item:last-child {
-            border-bottom: none;
-        }
+/* ── Highlight note ──────────────────────────── */
+.pub-note {
+  font-size: 0.82rem;
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  padding-left: 14px;
+  border-left: 2px solid #eee;
+}
+</style>
 
-        .pub-item:before {
-            content: '';
-            position: absolute;
-            left: -15px;
-            top: 28px;
-            width: 8px;
-            height: 8px;
-            background: #3498db;
-            border-radius: 50%;
-        }
+<!-- Accepted -->
+<div class="pub-section reveal">
+  <p class="pub-section-title">Conference Papers — Accepted</p>
 
-        .pub-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-
-        .pub-title a {
-            color: #2c3e50;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .pub-title a:hover {
-            color: #3498db;
-            text-decoration: underline;
-        }
-
-        .pub-authors {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-
-        .pub-venue {
-            font-size: 0.95rem;
-            color: #34495e;
-            margin-bottom: 5px;
-            font-style: italic;
-        }
-
-        .pub-status {
-            display: inline-block;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-top: 10px;
-        }
-
-        .status-submitted {
-            background-color: #e8f4fc;
-            color: #3498db;
-        }
-
-        .status-review {
-            background-color: #fff8e1;
-            color: #ff9800;
-        }
-
-        .status-published {
-            background-color: #e8f5e9;
-            color: #4caf50;
-        }
-
-        .pub-tag {
-            display: inline-block;
-            background: #f0f4f8;
-            color: #2c3e50;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-right: 10px;
-            margin-top: 10px;
-        }
-
-        .pub-links {
-            margin-top: 12px;
-        }
-
-        .pub-link {
-            display: inline-flex;
-            align-items: center;
-            margin-right: 20px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            color: #3498db;
-            transition: color 0.3s;
-        }
-
-        .pub-link:hover {
-            color: #2980b9;
-        }
-
-        .pub-link i {
-            margin-right: 6px;
-            font-size: 0.9rem;
-        }
-
-        /* ===== 特殊高亮 ===== */
-        .author-highlight {
-            font-weight: 600;
-            color: #3498db;
-        }
-
-        .highlight-box {
-            background: linear-gradient(120deg, rgba(52, 152, 219, 0.1) 0%, transparent 100%);
-            border-left: 3px solid #3498db;
-            padding: 15px 20px;
-            border-radius: 0 6px 6px 0;
-            margin: 20px 0;
-            font-weight: 500;
-            color: #2c3e50;
-            font-size: 1.05rem;
-        }
-
-        /* ===== 响应式设计 ===== */
-        @media (max-width: 768px) {
-            .content-card {
-                padding: 25px;
-            }
-            
-            .section-title {
-                margin: 35px 0 20px;
-            }
-            
-            .pub-header h2 {
-                font-size: 1.35rem;
-            }
-            
-            .pub-title {
-                font-size: 1.05rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content-card {
-                padding: 20px;
-            }
-            
-            .section-title:after {
-                width: 50px;
-            }
-            
-            .pub-links {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            
-            .pub-link {
-                margin-right: 15px;
-                margin-bottom: 8px;
-            }
-        }
-    </style>
-<div class="page-container">
-        <!-- 主标题 -->
-        <h2 class="section-title">PUBLICATIONS</h2>
-        
-        <!-- 工作论文部分 -->
-        <div class="content-card">
-            <div class="pub-header">
-                <h2>Conference Paper (Accepted)</h2>
-            </div>
-            
-            <div class="highlight-box">
-                Recent works accepted at top-tier AI conferences.
-            </div>
-            
-            <!-- VSI: CVPR 2026 Findings -->
-            <div class="pub-item">
-                <h3 class="pub-title">
-                    <a href="https://arxiv.org/abs/2508.06869">VSI: Visual Subtitle Integration for Keyframe Selection to Enhance Long Video Understanding</a>
-                </h3>
-                <div class="pub-authors">
-                    <span class="author-highlight">Jianxiang He</span>, Shaoguang Wang, Weiyu Guo, Meisheng Hong, Jungang Li, Yijie Xu, Ziyang Chen, Hui Xiong
-                </div>
-                <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition Findings (CVPR 2026 Findings)</div>
-                <div class="pub-status status-published">Accepted</div>
-                <div class="pub-tag">Video Understanding</div>
-                <div class="pub-tag">Keyframe Selection</div>
-                <div class="pub-links">
-                    <a href="https://arxiv.org/abs/2508.06869" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> arXiv
-                    </a>
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-code"></i> Code
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 会议论文部分 -->
-        <div class="content-card">
-            <div class="pub-header">
-                <h2>Conference Paper</h2>
-            </div>
-            
-            <div class="highlight-box">
-                Published and under review papers in top AI conferences and journals.
-            </div>
-            
-            <!-- 论文1 -->
-            <div class="pub-item">
-                <h3 class="pub-title">
-                    <a href="https://openreview.net/pdf?id=y5X44PzafF">Distribution Preference Optimization: A Fine-grained Perspective for LLM Unlearning</a>
-                </h3>
-                <div class="pub-authors">
-                    Kai Qin, Jiaqi Wu, <span class="author-highlight">Jianxiang He</span>, Haoyuan Sun, Yifei Zhao, Bin Liang, Yongzhe Chang, Tiantian Zhang, Houde Liu
-                </div>
-                <div class="pub-venue">Under Review</div>
-                <div class="pub-status status-review">Under Review</div>
-                <div class="pub-tag">LLM Unlearning</div>
-                <div class="pub-tag">Fine-grained Control</div>
-                <div class="pub-links">
-                    <a href="https://openreview.net/pdf?id=y5X44PzafF" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-code"></i> Code
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Logic-in-Frames: NeurIPS 2025 -->
-            <div class="pub-item">
-                <h3 class="pub-title">
-                    <a href="https://arxiv.org/abs/2503.13139">Logic-in-Frames: Dynamic Keyframe Search via Visual Semantic-Logical Verification for Long Video Understanding</a>
-                </h3>
-                <div class="pub-authors">
-                    Weiyu Guo, Ziyang Chen, Shaoguang Wang, <span class="author-highlight">Jianxiang He</span>, Yijie Xu, Jinhui Ye, Ying Sun, Hui Xiong
-                </div>
-                <div class="pub-venue">38th Conference on Neural Information Processing Systems (NeurIPS 2025)</div>
-                <div class="pub-status status-published">Accepted</div>
-                <div class="pub-tag">Long Video Analysis</div>
-                <div class="pub-tag">Multimodal Fusion</div>
-                <div class="pub-links">
-                    <a href="https://arxiv.org/abs/2503.13139" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> arXiv
-                    </a>
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-code"></i> Code
-                    </a>
-                </div>
-            </div>
-            
-            <!-- 论文3 -->
-            <div class="pub-item">
-                <h3 class="pub-title">
-                    <a href="https://arxiv.org/abs/2412.11936">A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges</a>
-                </h3>
-                <div class="pub-authors">
-                    Yibo Yan, Jiamin Su, <span class="author-highlight">Jianxiang He</span>, Fangteng Fu, Xu Zheng, Yuanhuiyi Lyu, Kun Wang, Shen Wang, Qingsong Wen, Xuming Hu
-                </div>
-                <div class="pub-venue">The 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)</div>
-                <div class="pub-status status-published">Published</div>
-                <div class="pub-tag">Survey Paper</div>
-                <div class="pub-tag">Mathematical Reasoning</div>
-                <div class="pub-links">
-                    <a href="https://arxiv.org/abs/2412.11936" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-code"></i> Code
-                    </a>
-                </div>
-            </div>
-            
-            <!-- 论文4 -->
-            <div class="pub-item">
-                <h3 class="pub-title">
-                    <a href="https://arxiv.org/abs/2502.16861">A Survey of fMRI to Image Reconstruction</a>
-                </h3>
-                <div class="pub-authors">
-                    Weiyu Guo, Guoying Sun, <span class="author-highlight">JianXiang He</span>, Tong Shao, Shaoguang Wang, Ziyang Chen, Meisheng Hong, Ying Sun, Hui Xiong~
-                </div>
-                <div class="pub-venue">arXiv preprint</div>
-                <div class="pub-tag">Survey Paper</div>
-                <div class="pub-tag">fMRI Reconstruction</div>
-                <div class="pub-links">
-                    <a href="https://arxiv.org/abs/2502.16861" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-code"></i> Code
-                    </a>
-                </div>
-            </div>
-            
-            <!-- 论文5 -->
-            <div class="pub-item">
-                <h3 class="pub-title">
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10012028/">The development of spiking neural network: A review</a>
-                </h3>
-                <div class="pub-authors">
-                    <span class="author-highlight">Jianxiang He</span>, Yanzi Li, Yingtian Liu, Jiyang Chen, Chaoqun Wang, Rui Song, Yibin Li~
-                </div>
-                <div class="pub-venue">2022 IEEE International Conference on Robotics and Biomimetics (ROBIO 2022)</div>
-                <div class="pub-status status-published">Published</div>
-                <div class="pub-tag">Review Paper</div>
-                <div class="pub-tag">Spiking Neural Networks</div>
-                <div class="pub-links">
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10012028/" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-code"></i> Code
-                    </a>
-                </div>
-            </div>
-        </div>
+  <div class="pub-row">
+    <div class="pub-badge-col"><span class="pb pb-green">Accepted</span></div>
+    <div>
+      <p class="pub-title">
+        <a href="https://arxiv.org/abs/2508.06869" target="_blank" rel="noopener">
+          VSI: Visual Subtitle Integration for Keyframe Selection to Enhance Long Video Understanding
+        </a>
+      </p>
+      <p class="pub-authors"><strong>Jianxiang He</strong>, Shaoguang Wang, Weiyu Guo, Meisheng Hong, Jungang Li, Yijie Xu, Ziyang Chen, Hui Xiong</p>
+      <p class="pub-venue">CVPR 2026 Findings &nbsp;·&nbsp; IEEE/CVF Conference on Computer Vision and Pattern Recognition</p>
+      <div class="pub-links">
+        <a class="pub-link" href="https://arxiv.org/abs/2508.06869" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> arXiv</a>
+        <a class="pub-link" href="#"><i class="fa-brands fa-github"></i> Code</a>
+      </div>
     </div>
+  </div>
 
-<!-- ## Working Paper
+  <div class="pub-row">
+    <div class="pub-badge-col"><span class="pb pb-green">Accepted</span></div>
+    <div>
+      <p class="pub-title">
+        <a href="https://arxiv.org/abs/2503.13139" target="_blank" rel="noopener">
+          Logic-in-Frames: Dynamic Keyframe Search via Visual Semantic-Logical Verification for Long Video Understanding
+        </a>
+      </p>
+      <p class="pub-authors">Weiyu Guo, Ziyang Chen, Shaoguang Wang, <strong>Jianxiang He</strong>, Yijie Xu, Jinhui Ye, Ying Sun, Hui Xiong</p>
+      <p class="pub-venue">NeurIPS 2025 &nbsp;·&nbsp; 38th Conference on Neural Information Processing Systems</p>
+      <div class="pub-links">
+        <a class="pub-link" href="https://arxiv.org/abs/2503.13139" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> arXiv</a>
+        <a class="pub-link" href="#"><i class="fa-brands fa-github"></i> Code</a>
+      </div>
+    </div>
+  </div>
 
-- [Beyond Visual Semantics: Dynamic Keyframe Search via Multimodal Syntactic Alignmen]<br>**Jianxiang He**, Shaoguang Wang, Jungang Li, Meisheng Hong<br>Submitted to **AAAI 2025**.<br>
-- [Visual-Clustering: Efficient Keyframe Reduction and Semantic Graph Construction for Enhanced Video Understanding]<br>Shaoguang Wang, **Jianxiang He**, Jungang Li, Meisheng Hong<br>Submitted to **AAAI 2025**.<br>
+  <div class="pub-row">
+    <div class="pub-badge-col"><span class="pb pb-green">Published</span></div>
+    <div>
+      <p class="pub-title">
+        <a href="https://arxiv.org/abs/2412.11936" target="_blank" rel="noopener">
+          A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method &amp; Challenges
+        </a>
+      </p>
+      <p class="pub-authors">Yibo Yan, Jiamin Su, <strong>Jianxiang He</strong>, Fangteng Fu, Xu Zheng, Yuanhuiyi Lyu, Kun Wang, Shen Wang, Qingsong Wen, Xuming Hu</p>
+      <p class="pub-venue">ACL 2025 &nbsp;·&nbsp; 63rd Annual Meeting of the Association for Computational Linguistics</p>
+      <div class="pub-links">
+        <a class="pub-link" href="https://arxiv.org/abs/2412.11936" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> PDF</a>
+        <a class="pub-link" href="#"><i class="fa-brands fa-github"></i> Code</a>
+      </div>
+    </div>
+  </div>
 
----
+  <div class="pub-row">
+    <div class="pub-badge-col"><span class="pb pb-green">Published</span></div>
+    <div>
+      <p class="pub-title">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10012028/" target="_blank" rel="noopener">
+          The Development of Spiking Neural Network: A Review
+        </a>
+      </p>
+      <p class="pub-authors"><strong>Jianxiang He</strong>, Yanzi Li, Yingtian Liu, Jiyang Chen, Chaoqun Wang, Rui Song, Yibin Li</p>
+      <p class="pub-venue">IEEE ROBIO 2022 &nbsp;·&nbsp; International Conference on Robotics and Biomimetics</p>
+      <div class="pub-links">
+        <a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10012028/" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> PDF</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Conference Paper
+<!-- Under Review -->
+<div class="pub-section reveal">
+  <p class="pub-section-title">Preprints &amp; Under Review</p>
 
-- [Distribution Preference Optimization: A Fine-grained Perspective for LLM Unlearning](https://openreview.net/pdf?id=y5X44PzafF)<br>Kai Qin, Jiaqi Wu, **Jianxiang He**, Haoyuan Sun, Yifei Zhao, Bin Liang, Yongzhe Chang, Tiantian Zhang, Houde Liu<br>Under Review<br>
+  <div class="pub-row">
+    <div class="pub-badge-col"><span class="pb pb-orange">Review</span></div>
+    <div>
+      <p class="pub-title">
+        <a href="https://openreview.net/pdf?id=y5X44PzafF" target="_blank" rel="noopener">
+          Distribution Preference Optimization: A Fine-grained Perspective for LLM Unlearning
+        </a>
+      </p>
+      <p class="pub-authors">Kai Qin, Jiaqi Wu, <strong>Jianxiang He</strong>, Haoyuan Sun, Yifei Zhao, Bin Liang, Yongzhe Chang, Tiantian Zhang, Houde Liu</p>
+      <p class="pub-venue">Under Review</p>
+      <div class="pub-links">
+        <a class="pub-link" href="https://openreview.net/pdf?id=y5X44PzafF" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> PDF</a>
+      </div>
+    </div>
+  </div>
 
-- [Logic-in-Frames: Dynamic Keyframe Search via Visual Semantic-Logical Verification for Long Video Understanding](https://arxiv.org/abs/2503.13139)<br>Weiyu Guo, Ziyang Chen, Shaoguang Wang, **Jianxiang He**, Yijie Xu, Jinhui Ye, Ying Sun, Hui Xiong<br>arXiv<br>
-
-- [A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method & Challenges](https://arxiv.org/abs/2412.11936)<br>Yibo Yan, Jiamin Su, **Jianxiang He**, Fangteng Fu, Xu Zheng, Yuanhuiyi Lyu, Kun Wang, Shen Wang, Qingsong Wen, Xuming Hu<br>The 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025)<br>
-
-- [A Survey of fMRI to Image Reconstruction](https://arxiv.org/abs/2502.16861)<br>Weiyu Guo, Guoying Sun, **JianXiang He**, Tong Shao, Shaoguang Wang, Ziyang Chen, Meisheng Hong, Ying Sun, Hui Xiong**~**<br>arXiv<br>
-
-- [The development of spiking neural network: A review](https://ieeexplore.ieee.org/abstract/document/10012028/)<br>**Jianxiang He**, Yanzi Li, Yingtian Liu, Jiyang Chen, Chaoqun Wang, Rui Song, Yibin Li**~**<br>2022 IEEE International Conference on Robotics and Biomimetics (ROBIO 2022)<br> -->
-
-
-
-<br>
-
-
----
-
-<br>
+  <div class="pub-row">
+    <div class="pub-badge-col"><span class="pb pb-gray">Preprint</span></div>
+    <div>
+      <p class="pub-title">
+        <a href="https://arxiv.org/abs/2502.16861" target="_blank" rel="noopener">
+          A Survey of fMRI to Image Reconstruction
+        </a>
+      </p>
+      <p class="pub-authors">Weiyu Guo, Guoying Sun, <strong>Jianxiang He</strong>, Tong Shao, Shaoguang Wang, Ziyang Chen, Meisheng Hong, Ying Sun, Hui Xiong</p>
+      <p class="pub-venue">arXiv preprint</p>
+      <div class="pub-links">
+        <a class="pub-link" href="https://arxiv.org/abs/2502.16861" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> PDF</a>
+      </div>
+    </div>
+  </div>
+</div>
