@@ -194,6 +194,10 @@ layout: home
   flex-shrink: 0;
 }
 
+/* Override global p+p rule from main.css (margin-top:-1.5em causes overlap) */
+.hp p { text-indent: 0 !important; }
+.hp p + p { margin-top: 0 !important; }
+
 /* About */
 .about-p {
   font-size: 0.97rem;
@@ -262,6 +266,9 @@ layout: home
   flex: 1;
   min-width: 0;
 }
+/* Override main.css p+p rule (margin-top:-1.5em causes overlap) */
+.edu-body p { margin: 0; text-indent: 0 !important; }
+.edu-body p + p { margin-top: 0 !important; }
 .edu-school {
   font-weight: 700;
   font-size: 0.96rem;
