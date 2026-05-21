@@ -8,6 +8,9 @@ owner:
   cv: https://Jacksonha7.com/file/CV-Hejianxiang.pdf
   github: Jacksonha7
   scholar: https://scholar.google.com.hk/citations?user=6ZJXY_EAAAAJ&hl=zh-CN
+  xiaohongshu: https://xhslink.com/m/64BfDOv50hk
+  zhihu: https://www.zhihu.com/people/he-jian-xiang-10
+  bilibili: https://space.bilibili.com/51103812?spm_id_from=333.1189.0.0
 
 links:
   - title: About Me
@@ -16,6 +19,8 @@ links:
     url: /publications/
   - title: Awards
     url: /awards/
+  - title: Another Me
+    url: /another-person/
 
 timezone: China/Guangzhou
 future: true
