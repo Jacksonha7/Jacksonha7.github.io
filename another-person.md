@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Another Me
+permalink: /another-person/index.html
 ---
 
 <style>
@@ -422,7 +423,7 @@ title: Another Me
 
   <!-- ══ Hero ══════════════════════════════════════ -->
   <div class="ap-hero">
-    <h1 class="ap-hero-title">另一个人</h1>
+    <h1 class="ap-hero-title">Another Me</h1>
     <p class="ap-hero-quote">
       在学术之外，我也是一个画画的人、跳舞的人、做音乐的人。<br>
       这里记录那些不写论文的时光。
