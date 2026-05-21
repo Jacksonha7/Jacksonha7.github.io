@@ -41,7 +41,7 @@ permalink: /another-person/index.html
   overflow: hidden;
   background: #f5f5f5;
   aspect-ratio: 1 / 1;
-  cursor: pointer;
+  cursor: zoom-in;
 }
 .art-card img {
   width: 100%; height: 100%;
@@ -51,17 +51,18 @@ permalink: /another-person/index.html
 }
 .art-card:hover img {
   transform: scale(1.04);
-  filter: brightness(0.88);
+  filter: brightness(0.82);
 }
 .art-overlay {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: flex-end;
-  padding: 14px;
+  justify-content: space-between;
+  padding: 12px 14px;
   opacity: 0;
   transition: opacity 0.25s ease;
-  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 55%);
 }
 .art-card:hover .art-overlay { opacity: 1; }
 .art-label {
@@ -70,6 +71,99 @@ permalink: /another-person/index.html
   color: rgba(255,255,255,0.85);
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+.art-zoom-icon {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ── Lightbox ────────────────────────────────── */
+.lb {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(0,0,0,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.lb.open { display: flex; }
+
+.lb-img {
+  max-width: min(90vw, 900px);
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+  animation: lbIn 0.22s ease;
+  user-select: none;
+}
+@keyframes lbIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Close button */
+.lb-close {
+  position: fixed;
+  top: 20px; right: 24px;
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s;
+  z-index: 9001;
+  line-height: 1;
+}
+.lb-close:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
+/* Prev / Next arrows */
+.lb-prev, .lb-next {
+  position: fixed;
+  top: 50%; transform: translateY(-50%);
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s;
+  z-index: 9001;
+  user-select: none;
+}
+.lb-prev { left: 18px; }
+.lb-next { right: 18px; }
+.lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.18); color: #fff; }
+
+/* Counter */
+.lb-counter {
+  position: fixed;
+  bottom: 22px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.1em;
+  z-index: 9001;
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .lb-prev { left: 8px; }
+  .lb-next { right: 8px; }
 }
 
 /* ── Dance grid ──────────────────────────────── */
@@ -185,41 +279,68 @@ permalink: /another-person/index.html
   </div>
 
   <div class="art-grid">
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-1.jpg" data-idx="0">
       <img src="/youhua/painting-1.jpg" alt="Painting 01" loading="lazy">
-      <div class="art-overlay"><span class="art-label">01</span></div>
+      <div class="art-overlay">
+        <span class="art-label">01</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-2.jpg" data-idx="1">
       <img src="/youhua/painting-2.jpg" alt="Painting 02" loading="lazy">
-      <div class="art-overlay"><span class="art-label">02</span></div>
+      <div class="art-overlay">
+        <span class="art-label">02</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-3.jpg" data-idx="2">
       <img src="/youhua/painting-3.jpg" alt="Painting 03" loading="lazy">
-      <div class="art-overlay"><span class="art-label">03</span></div>
+      <div class="art-overlay">
+        <span class="art-label">03</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-4.jpg" data-idx="3">
       <img src="/youhua/painting-4.jpg" alt="Painting 04" loading="lazy">
-      <div class="art-overlay"><span class="art-label">04</span></div>
+      <div class="art-overlay">
+        <span class="art-label">04</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-5.jpg" data-idx="4">
       <img src="/youhua/painting-5.jpg" alt="Painting 05" loading="lazy">
-      <div class="art-overlay"><span class="art-label">05</span></div>
+      <div class="art-overlay">
+        <span class="art-label">05</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-6.jpg" data-idx="5">
       <img src="/youhua/painting-6.jpg" alt="Painting 06" loading="lazy">
-      <div class="art-overlay"><span class="art-label">06</span></div>
+      <div class="art-overlay">
+        <span class="art-label">06</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-7.jpg" data-idx="6">
       <img src="/youhua/painting-7.jpg" alt="Painting 07" loading="lazy">
-      <div class="art-overlay"><span class="art-label">07</span></div>
+      <div class="art-overlay">
+        <span class="art-label">07</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-8.jpg" data-idx="7">
       <img src="/youhua/painting-8.jpg" alt="Painting 08" loading="lazy">
-      <div class="art-overlay"><span class="art-label">08</span></div>
+      <div class="art-overlay">
+        <span class="art-label">08</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
-    <div class="art-card">
+    <div class="art-card" data-src="/youhua/painting-9.jpg" data-idx="8">
       <img src="/youhua/painting-9.jpg" alt="Painting 09" loading="lazy">
-      <div class="art-overlay"><span class="art-label">09</span></div>
+      <div class="art-overlay">
+        <span class="art-label">09</span>
+        <span class="art-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+      </div>
     </div>
   </div>
 </div>
@@ -274,3 +395,86 @@ permalink: /another-person/index.html
     <span class="album-arrow">→</span>
   </a>
 </div>
+
+<!-- ── Lightbox DOM ── -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lb-close" aria-label="Close">✕</button>
+  <button class="lb-prev"  id="lb-prev"  aria-label="Previous">‹</button>
+  <img class="lb-img" id="lb-img" src="" alt="">
+  <button class="lb-next"  id="lb-next"  aria-label="Next">›</button>
+  <span class="lb-counter" id="lb-counter"></span>
+</div>
+
+<script>
+(function () {
+  var srcs = [
+    '/youhua/painting-1.jpg',
+    '/youhua/painting-2.jpg',
+    '/youhua/painting-3.jpg',
+    '/youhua/painting-4.jpg',
+    '/youhua/painting-5.jpg',
+    '/youhua/painting-6.jpg',
+    '/youhua/painting-7.jpg',
+    '/youhua/painting-8.jpg',
+    '/youhua/painting-9.jpg'
+  ];
+
+  var lb      = document.getElementById('lb');
+  var lbImg   = document.getElementById('lb-img');
+  var lbCtr   = document.getElementById('lb-counter');
+  var current = 0;
+
+  function show(idx) {
+    current = (idx + srcs.length) % srcs.length;
+    lbImg.src = srcs[current];
+    lbCtr.textContent = (current + 1) + ' / ' + srcs.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  /* Open on card click */
+  document.querySelectorAll('.art-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      show(parseInt(card.dataset.idx, 10));
+    });
+  });
+
+  /* Controls */
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-prev').addEventListener('click', function (e) {
+    e.stopPropagation();
+    show(current - 1);
+  });
+  document.getElementById('lb-next').addEventListener('click', function (e) {
+    e.stopPropagation();
+    show(current + 1);
+  });
+
+  /* Click backdrop to close */
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb) close();
+  });
+
+  /* Keyboard: ← → Esc */
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft')  show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+    if (e.key === 'Escape')     close();
+  });
+
+  /* Swipe on mobile */
+  var touchStartX = 0;
+  lb.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) show(dx < 0 ? current + 1 : current - 1);
+  }, { passive: true });
+})();
+</script>
