@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-clean
 permalink: /awards/index.html
 title: Awards
 ---
@@ -261,8 +261,7 @@ title: Awards
             }
         }
     </style>
-<body>
-    <div class="page-container">
+<div class="page-container">
         <!-- 主标题 -->
         <h2 class="section-title">AWARDS & RESEARCH</h2>
         
@@ -373,4 +372,3 @@ title: Awards
             </div>
         </div>
     </div>
-</body>

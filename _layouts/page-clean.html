@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  {% include head.html %}
+
+  <script src="https://cdn.counter.dev/script.js" data-id="4c8f7caa-2b55-46cd-a995-2c4633303773" data-utcoffset="8"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5N5JY1E21"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T5N5JY1E21');
+  </script>
+
+  <style>
+  /* ── Global Reset ─────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body.clean-body {
+    font-family: "Inter", "PT Sans Narrow", "Segoe UI", system-ui, sans-serif;
+    color: #1a1a1a;
+    background: #fff;
+    overflow-x: hidden;
+  }
+
+  /* ── Fixed Navbar (same as home) ─────────────── */
+  .hn {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 0 48px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 1px 24px rgba(0,0,0,0.07);
+    transition: box-shadow 0.3s;
+  }
+  .hn-inner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hn-brand {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+  }
+  .hn-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    align-items: center;
+  }
+  .hn-links a {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #444;
+    text-decoration: none;
+    letter-spacing: 0.45px;
+    transition: color 0.25s;
+    position: relative;
+    padding-bottom: 3px;
+  }
+  .hn-links a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 1.5px;
+    background: #0055cc;
+    transition: width 0.25s ease;
+    border-radius: 2px;
+  }
+  .hn-links a:hover { color: #0055cc; }
+  .hn-links a:hover::after { width: 100%; }
+
+  /* Mobile hamburger */
+  .hn-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hn-hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: #333;
+    border-radius: 2px;
+  }
+  .hn-mobile {
+    display: none;
+    position: fixed;
+    top: 62px; left: 0; right: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(16px);
+    padding: 12px 24px 20px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+  .hn-mobile.open { display: block; }
+  .hn-mobile a {
+    display: block;
+    padding: 11px 0;
+    font-size: 0.93rem;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .hn-mobile a:last-child { border-bottom: none; }
+
+  /* ── Page Header ─────────────────────────────── */
+  .ph {
+    margin-top: 62px;
+    padding: 52px 48px 36px;
+    background: linear-gradient(135deg, #f8faff 0%, #eef3ff 100%);
+    border-bottom: 1px solid #e0e8ff;
+  }
+  .ph-inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .ph h1 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: #0a0a1a;
+    letter-spacing: -0.2px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .ph h1::before {
+    content: '';
+    display: inline-block;
+    width: 5px; height: 28px;
+    background: linear-gradient(180deg, #0055cc, #7c3aed);
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ── Content ─────────────────────────────────── */
+  .pc {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 48px 80px;
+  }
+
+  /* ── Reveal animation ─────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Footer ───────────────────────────────────── */
+  .hf {
+    text-align: center;
+    padding: 28px 20px;
+    border-top: 1px solid #efefef;
+    font-size: 0.8rem;
+    color: #b0b0b0;
+    background: #fafafa;
+    font-family: "Inter", sans-serif;
+  }
+  .hf a { color: #b0b0b0; text-decoration: none; transition: color 0.2s; }
+  .hf a:hover { color: #555; }
+
+  /* ── Responsive ──────────────────────────────── */
+  @media (max-width: 720px) {
+    .hn { padding: 0 20px; }
+    .hn-links { display: none; }
+    .hn-hamburger { display: flex; }
+    .ph { padding: 40px 20px 28px; }
+    .pc { padding: 28px 20px 60px; }
+  }
+  </style>
+</head>
+
+<body class="clean-body">
+
+  <!-- ── Fixed Navbar ── -->
+  <header class="hn" id="hn">
+    <div class="hn-inner">
+      <a class="hn-brand" href="{{ site.url }}/">{{ site.owner.name }}</a>
+      <ul class="hn-links">
+        {% for link in site.links %}
+        <li><a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+      <button class="hn-hamburger" id="hn-hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <nav class="hn-mobile" id="hn-mobile" aria-label="Mobile navigation">
+    {% for link in site.links %}
+    <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="ph">
+    <div class="ph-inner">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <!-- ── Page Content ── -->
+  <div class="pc">
+    {{ content }}
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="hf">
+    <p>© {{ site.time | date: '%Y' }} {{ site.owner.name }}
+       &nbsp;·&nbsp; Built with
+       <a href="https://pages.github.com/" rel="nofollow">GitHub Pages</a> &amp;
+       <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a>
+    </p>
+  </footer>
+
+  {% include scripts.html %}
+
+  <script>
+  (function () {
+    /* Mobile menu toggle */
+    var hn = document.getElementById('hn');
+    var menuBtn = document.getElementById('hn-hamburger');
+    var menuEl  = document.getElementById('hn-mobile');
+    if (menuBtn && menuEl) {
+      menuBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        menuEl.classList.toggle('open');
+      });
+      document.addEventListener('click', function (e) {
+        if (!hn.contains(e.target) && !menuEl.contains(e.target)) {
+          menuEl.classList.remove('open');
+        }
+      });
+    }
+
+    /* Section reveal on scroll */
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('revealed');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        el.classList.add('revealed');
+      });
+    }
+  })();
+  </script>
+
+</body>
+</html>

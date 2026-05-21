@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-clean
 permalink: /publications/index.html
 title: Publications
 ---
@@ -7,14 +7,6 @@ title: Publications
 
 <style>
         /* ===== 全局样式 ===== */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f5f7fa;
-            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-            color: #2c3e50;
-        }
-
         .page-container {
             max-width: 900px;
             margin: 0 auto;
@@ -243,8 +235,7 @@ title: Publications
             }
         }
     </style>
-<body>
-    <div class="page-container">
+<div class="page-container">
         <!-- 主标题 -->
         <h2 class="section-title">PUBLICATIONS</h2>
         
@@ -401,7 +392,6 @@ title: Publications
             </div>
         </div>
     </div>
-</body>
 
 <!-- ## Working Paper
 

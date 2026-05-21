@@ -21,7 +21,7 @@ layout: home
   position: absolute;
   inset: 0;
   background:
-    url('https://picsum.photos/seed/mountain-academic-dusk/1920/1080')
+    url('/youhua/background.png')
     center / cover no-repeat;
   transform: scale(1.04);
   transition: transform 8s ease;
@@ -258,6 +258,10 @@ layout: home
   padding-top: 3px;
   letter-spacing: 0.2px;
 }
+.edu-body {
+  flex: 1;
+  min-width: 0;
+}
 .edu-school {
   font-weight: 700;
   font-size: 0.96rem;
@@ -387,8 +391,8 @@ layout: home
 
   <div class="hero-cnt">
     <img class="hero-avatar"
-         src="https://picsum.photos/seed/nansha-scenery/400/400"
-         alt="Jianxiang He — replace with your photo">
+         src="/youhua/me.jpg"
+         alt="Jianxiang He">
 
     <h1 class="hero-name">何建翔 &nbsp;·&nbsp; Jianxiang He</h1>
 
@@ -455,21 +459,21 @@ layout: home
   <div class="edu-list">
     <div class="edu-item reveal">
       <div class="edu-year">Sep 2020 – Jun 2024</div>
-      <div>
+      <div class="edu-body">
         <p class="edu-school">Shandong University &nbsp;·&nbsp; 山东大学</p>
         <p class="edu-detail">B.E. in Automation &nbsp;·&nbsp; NLP, image processing, machine learning</p>
       </div>
     </div>
     <div class="edu-item reveal">
       <div class="edu-year">Sep 2024 – Jun 2026</div>
-      <div>
+      <div class="edu-body">
         <p class="edu-school">HKUST(GZ) &nbsp;·&nbsp; 香港科技大学（广州）</p>
         <p class="edu-detail">MPhil in AI &nbsp;·&nbsp; Advisors: Prof. Hui Xiong &amp; Prof. Xuming Hu &nbsp;·&nbsp; Multimodal LLMs, long video</p>
       </div>
     </div>
     <div class="edu-item current reveal">
       <div class="edu-year">Fall 2026 – Present</div>
-      <div>
+      <div class="edu-body">
         <p class="edu-school">MBZUAI &nbsp;·&nbsp; 穆罕默德·本·扎耶德人工智能大学</p>
         <p class="edu-detail">PhD in AI &nbsp;·&nbsp; Advisor: Prof. Xiaojun Chang &nbsp;·&nbsp; VLA · Embodied AI · World Models</p>
       </div>
