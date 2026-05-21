@@ -106,16 +106,6 @@ layout: page
   color: var(--text-muted);
 }
 
-.notice-bar {
-  margin-top: 18px;
-  border-radius: 12px;
-  padding: 14px 16px;
-  border: 1px solid rgba(234, 88, 12, 0.28);
-  background: linear-gradient(120deg, #fff7ed, #fff);
-  color: #9a3412;
-  font-weight: 600;
-}
-
 .timeline {
   display: grid;
   gap: 14px;
@@ -189,6 +179,75 @@ layout: page
   font-size: 0.94rem;
 }
 
+/* Scholar Stats Widget */
+.scholar-widget {
+  margin-top: 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #f0f7ff, #f8f5ff);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.scholar-widget-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.scholar-stats {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.scholar-stat {
+  text-align: center;
+}
+
+.scholar-stat-value {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.scholar-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.scholar-link {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.scholar-link:hover {
+  opacity: 0.85;
+  color: white;
+  text-decoration: none;
+}
+
+.scholar-loading {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 .map-container {
   margin-top: 26px;
   border-radius: 16px;
@@ -226,6 +285,15 @@ layout: page
   .timeline-item {
     padding: 16px;
   }
+
+  .scholar-widget {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scholar-link {
+    margin-left: 0;
+  }
 }
 </style>
 
@@ -233,21 +301,20 @@ layout: page
   <section class="hero">
     <h1 class="hero-headline">Jianxiang He / 何建翔</h1>
     <p class="hero-subline">
-      MPhil in Artificial Intelligence at HKUST(GZ), currently working on multimodal large language models,
-      long video understanding, and efficient key-frame selection.
+      Incoming PhD student at <strong>MBZUAI</strong>, advised by Prof. <strong>Xiaojun Chang</strong> (常晓军).
+      MPhil in Artificial Intelligence at HKUST(GZ). Research focuses on Vision-Language-Action models,
+      embodied AI, world models, and multimodal large language models.
     </p>
     <div class="badge-row">
+      <span class="badge">Vision-Language-Action</span>
+      <span class="badge">Embodied AI</span>
+      <span class="badge">World Models</span>
       <span class="badge">Multimodal LLM</span>
       <span class="badge">Video Understanding</span>
-      <span class="badge">Reinforcement Learning</span>
-      <span class="badge">NLP</span>
     </div>
     <div class="contact-grid">
       <p class="contact-line"><strong>Email:</strong> jhe307@connect.hkust-gz.edu.cn</p>
-      <p class="contact-line"><strong>Affiliation:</strong> AI+ Lab / HKUST-GZ NLP Group</p>
-    </div>
-    <div class="notice-bar">
-      I am actively seeking a PhD position for Fall 2026. Feel free to reach out for collaboration or opportunities.
+      <p class="contact-line"><strong>Affiliation:</strong> AI+ Lab / HKUST-GZ NLP Group → MBZUAI (Fall 2026)</p>
     </div>
   </section>
 
@@ -256,9 +323,22 @@ layout: page
     <p>
       I am a Master of Philosophy student at the Hong Kong University of Science and Technology (Guangzhou),
       advised by Professor <strong>Hui Xiong</strong> and Assistant Professor <strong>Xuming Hu</strong>.
-      My current research focuses on long-video understanding, where I explore key-frame selection and multimodal
-      fusion strategies to improve both efficiency and reasoning quality.
+      My current research focuses on long-video understanding, key-frame selection, and multimodal fusion.
+      I will join <strong>MBZUAI</strong> as a PhD student in Fall 2026, under the supervision of
+      Prof. <strong>Xiaojun Chang</strong>, where I plan to work on Vision-Language-Action (VLA) models,
+      embodied AI, and world models.
     </p>
+  </div>
+
+  <!-- Google Scholar Citation Stats -->
+  <div class="scholar-widget">
+    <span class="scholar-widget-icon">📚</span>
+    <div class="scholar-stats" id="scholar-stats">
+      <span class="scholar-loading">Loading citation stats…</span>
+    </div>
+    <a class="scholar-link" href="https://scholar.google.com/citations?user=6ZJXY_EAAAAJ&hl=en" target="_blank" rel="noopener">
+      Google Scholar ↗
+    </a>
   </div>
 
   <h2 class="section-title">Education</h2>
@@ -268,35 +348,50 @@ layout: page
       <h3 class="timeline-title">Shandong University</h3>
       <p class="timeline-meta">B.E. in Automation · Core courses in NLP, image processing, and machine learning.</p>
     </div>
-    <div class="timeline-item current">
-      <div class="timeline-time">Sept 2024 – Present</div>
+    <div class="timeline-item">
+      <div class="timeline-time">Sept 2024 – June 2026</div>
       <h3 class="timeline-title">Hong Kong University of Science and Technology (Guangzhou)</h3>
-      <p class="timeline-meta">MPhil in AI · Focused on Multimodal LLMs, NLP, and reinforcement learning.</p>
+      <p class="timeline-meta">MPhil in AI · Advisors: Prof. Hui Xiong &amp; Prof. Xuming Hu · Focused on Multimodal LLMs, long video understanding.</p>
+    </div>
+    <div class="timeline-item current">
+      <div class="timeline-time">Fall 2026 – Present</div>
+      <h3 class="timeline-title">Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</h3>
+      <p class="timeline-meta">PhD in AI · Advisor: Prof. Xiaojun Chang (常晓军) · Research focus: VLA, Embodied AI, World Models.</p>
     </div>
   </div>
 
   <h2 class="section-title">Research Interests</h2>
   <div class="grid-2">
     <article class="card">
+      <h3>Vision-Language-Action (VLA)</h3>
+      <p>Developing unified models that ground language instructions in visual perception and physical actions for robot learning.</p>
+    </article>
+    <article class="card">
+      <h3>Embodied AI</h3>
+      <p>Enabling agents to perceive, reason, and act in physical environments through sensorimotor integration and interactive learning.</p>
+    </article>
+    <article class="card">
+      <h3>World Models</h3>
+      <p>Building internal representations of the world that allow agents to predict, plan, and generalize across diverse scenarios.</p>
+    </article>
+    <article class="card">
       <h3>Multimodal LLM</h3>
-      <p>Building unified systems that align language, vision, and audio for robust real-world understanding.</p>
-    </article>
-    <article class="card">
-      <h3>Reinforcement Learning</h3>
-      <p>Designing adaptive optimization strategies for sequential decision-making and efficient policy learning.</p>
-    </article>
-    <article class="card">
-      <h3>Video Understanding</h3>
-      <p>Studying temporal reasoning and sparse key-frame retrieval in long videos for scalable model inference.</p>
-    </article>
-    <article class="card">
-      <h3>Applied NLP</h3>
-      <p>Exploring efficient and reliable language technologies for research, education, and productivity tools.</p>
+      <p>Advancing long-video understanding and efficient key-frame selection via multimodal reasoning and semantic alignment.</p>
     </article>
   </div>
 
   <h2 class="section-title">News & Publications</h2>
   <div class="news-list">
+    <article class="news-item">
+      <span class="tag">CVPR 2026 Findings</span>
+      <a class="news-title" href="https://arxiv.org/abs/2508.06869">VSI: Visual Subtitle Integration for Keyframe Selection to Enhance Long Video Understanding</a>
+      <p class="news-authors"><strong>Jianxiang He</strong>, Shaoguang Wang, Weiyu Guo, et al.</p>
+    </article>
+    <article class="news-item">
+      <span class="tag">NeurIPS 2025</span>
+      <a class="news-title" href="https://arxiv.org/abs/2503.13139">Logic-in-Frames: Dynamic Keyframe Search via Visual Semantic-Logical Verification for Long Video Understanding</a>
+      <p class="news-authors">Weiyu Guo, Ziyang Chen, Shaoguang Wang, <strong>Jianxiang He</strong>, et al.</p>
+    </article>
     <article class="news-item">
       <span class="tag">ACL 2025</span>
       <a class="news-title" href="https://arxiv.org/abs/2412.11936">A Survey of Mathematical Reasoning in the Era of Multimodal Large Language Model: Benchmark, Method &amp; Challenges</a>
@@ -314,3 +409,27 @@ layout: page
     <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Mf2edNvrXMP-LKR3oRo6m-y46Llurx-ccm_QSyDjnlE"></script>
   </div>
 </div>
+
+<script>
+(function () {
+  var authorId = "2347022035";
+  var statsEl = document.getElementById("scholar-stats");
+
+  fetch("https://api.semanticscholar.org/graph/v1/author/" + authorId + "?fields=citationCount,hIndex,paperCount")
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      statsEl.innerHTML = [
+        stat(data.citationCount, "Citations"),
+        stat(data.hIndex, "h-index"),
+        stat(data.paperCount, "Papers"),
+      ].join("");
+    })
+    .catch(function () {
+      statsEl.innerHTML = '<span class="scholar-loading"><a href="https://scholar.google.com/citations?user=6ZJXY_EAAAAJ" target="_blank">View on Google Scholar ↗</a></span>';
+    });
+
+  function stat(value, label) {
+    return '<div class="scholar-stat"><div class="scholar-stat-value">' + value + '</div><div class="scholar-stat-label">' + label + '</div></div>';
+  }
+})();
+</script>

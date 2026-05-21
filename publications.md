@@ -251,50 +251,28 @@ title: Publications
         <!-- 工作论文部分 -->
         <div class="content-card">
             <div class="pub-header">
-                <h2>Working Paper</h2>
+                <h2>Conference Paper (Accepted)</h2>
             </div>
             
             <div class="highlight-box">
-                Recent works submitted to top-tier conferences in AI and multimodal research.
+                Recent works accepted at top-tier AI conferences.
             </div>
             
-            <!-- 论文1 -->
+            <!-- VSI: CVPR 2026 Findings -->
             <div class="pub-item">
                 <h3 class="pub-title">
-                    <a href="https://arxiv.org/pdf/2508.06869">VSI: Visual Subtitle Integration for Keyframe Selection to enhance Long Video Understanding</a>
+                    <a href="https://arxiv.org/abs/2508.06869">VSI: Visual Subtitle Integration for Keyframe Selection to Enhance Long Video Understanding</a>
                 </h3>
                 <div class="pub-authors">
                     <span class="author-highlight">Jianxiang He</span>, Shaoguang Wang, Weiyu Guo, Meisheng Hong, Jungang Li, Yijie Xu, Ziyang Chen, Hui Xiong
                 </div>
-                <div class="pub-venue">Submitted to AAAI 2026</div>
-                <div class="pub-status status-submitted">Submitted</div>
+                <div class="pub-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition Findings (CVPR 2026 Findings)</div>
+                <div class="pub-status status-published">Accepted</div>
                 <div class="pub-tag">Video Understanding</div>
                 <div class="pub-tag">Keyframe Selection</div>
                 <div class="pub-links">
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> PDF
-                    </a>
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-code"></i> Code
-                    </a>
-                </div>
-            </div>
-            
-            <!-- 论文2 -->
-            <div class="pub-item">
-                <h3 class="pub-title">
-                    <a href="https://arxiv.org/pdf/2508.03337">Less is More: Token-Efficient Video-QA via Adaptive Frame-Pruning and Semantic Graph Integration</a>
-                </h3>
-                <div class="pub-authors">
-                    Shaoguang Wang, <span class="author-highlight">Jianxiang He</span>, Yijie Xu, Ziyang Chen, Weiyu Guo, Hui Xiong
-                </div>
-                <div class="pub-venue">Submitted to AAAI 2026</div>
-                <div class="pub-status status-submitted">Submitted</div>
-                <div class="pub-tag">Video Summarization</div>
-                <div class="pub-tag">Efficiency Optimization</div>
-                <div class="pub-links">
-                    <a href="#" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> PDF
+                    <a href="https://arxiv.org/abs/2508.06869" class="pub-link">
+                        <i class="fas fa-file-pdf"></i> arXiv
                     </a>
                     <a href="#" class="pub-link">
                         <i class="fas fa-code"></i> Code
@@ -335,7 +313,7 @@ title: Publications
                 </div>
             </div>
             
-            <!-- 论文2 -->
+            <!-- Logic-in-Frames: NeurIPS 2025 -->
             <div class="pub-item">
                 <h3 class="pub-title">
                     <a href="https://arxiv.org/abs/2503.13139">Logic-in-Frames: Dynamic Keyframe Search via Visual Semantic-Logical Verification for Long Video Understanding</a>
@@ -343,12 +321,13 @@ title: Publications
                 <div class="pub-authors">
                     Weiyu Guo, Ziyang Chen, Shaoguang Wang, <span class="author-highlight">Jianxiang He</span>, Yijie Xu, Jinhui Ye, Ying Sun, Hui Xiong
                 </div>
-                <div class="pub-venue">arXiv preprint</div>
+                <div class="pub-venue">38th Conference on Neural Information Processing Systems (NeurIPS 2025)</div>
+                <div class="pub-status status-published">Accepted</div>
                 <div class="pub-tag">Long Video Analysis</div>
                 <div class="pub-tag">Multimodal Fusion</div>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2503.13139" class="pub-link">
-                        <i class="fas fa-file-pdf"></i> PDF
+                        <i class="fas fa-file-pdf"></i> arXiv
                     </a>
                     <a href="#" class="pub-link">
                         <i class="fas fa-code"></i> Code
